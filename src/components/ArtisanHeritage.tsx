@@ -37,6 +37,10 @@ export const ArtisanHeritage: React.FC = () => {
         
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto space-y-2 mb-12">
+          <div className="w-16 h-16 rounded-full overflow-hidden mx-auto mb-3 border border-amber-400/50 shadow-md bg-black">
+            <img src="/assets/images/logo.png" alt="Nawabiyaat Atelier Seal" className="w-full h-full object-cover" />
+          </div>
+
           <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-100 text-amber-900 text-[10px] font-bold uppercase tracking-[0.2em]">
             <Crown className="w-3.5 h-3.5 text-amber-800" />
             <span>NAWABIYAAT ARTISANAL CRAFTSMANSHIP</span>

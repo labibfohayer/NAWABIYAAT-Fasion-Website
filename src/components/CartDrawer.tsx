@@ -59,7 +59,9 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
           {/* Header */}
           <div className="p-4 sm:p-5 border-b border-stone-200 flex items-center justify-between">
             <div className="flex items-center gap-2.5">
-              <ShoppingBag className="w-5 h-5 text-black" />
+              <div className="w-7 h-7 rounded-full overflow-hidden border border-amber-400/40 shrink-0 bg-black">
+                <img src="/assets/images/logo.png" alt="Nawabiyaat" className="w-full h-full object-cover" />
+              </div>
               <h2 className="text-sm sm:text-base font-bold font-sans tracking-wider uppercase text-black">
                 YOUR BAG ({cart.reduce((a, b) => a + b.quantity, 0)})
               </h2>

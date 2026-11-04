@@ -18,16 +18,20 @@ export const Footer: React.FC<FooterProps> = ({ onOpenSizeAdvisor, onNavigate })
           
           {/* 1. Brand Info */}
           <div className="space-y-4">
-            <div className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-full bg-stone-900 border border-amber-400/40 text-amber-300 flex items-center justify-center shadow-md">
-                <Crown className="w-5 h-5" />
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-12 rounded-full overflow-hidden border border-amber-400/50 shadow-lg bg-black shrink-0">
+                <img
+                  src="/assets/images/logo.png"
+                  alt="Nawabiyaat Atelier"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div>
                 <span className="font-serif text-2xl font-bold tracking-[0.18em] text-white uppercase block leading-none">
                   NAWABIYAAT
                 </span>
                 <span className="text-[8px] tracking-[0.28em] text-amber-400 font-bold uppercase block mt-1 leading-none">
-                  ROYAL PANJABI ATELIER
+                  FASHION BEYOND TIME
                 </span>
               </div>
             </div>

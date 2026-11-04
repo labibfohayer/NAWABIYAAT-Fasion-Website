@@ -47,6 +47,10 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onBackToHome }) => {
       {/* 2. Page Hero Header */}
       <div className="bg-stone-50 border-y border-stone-200 py-12 md:py-16 mb-12">
         <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 text-center max-w-3xl">
+          <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4 border-2 border-amber-400/60 shadow-lg bg-black">
+            <img src="/assets/images/logo.png" alt="Nawabiyaat Concierge" className="w-full h-full object-cover" />
+          </div>
+
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-amber-50 border border-amber-200 text-amber-900 text-[10px] font-bold uppercase tracking-[0.2em] mb-3">
             <Crown className="w-3.5 h-3.5 text-amber-700" />
             <span>NAWABIYAAT CONCIERGE & ATELIER</span>

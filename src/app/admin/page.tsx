@@ -273,8 +273,12 @@ export default function AdminDashboard() {
         
         {/* Brand Logo & Portal Title */}
         <div className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-black shadow-md shadow-amber-400/20">
-            <Crown className="w-5 h-5" />
+          <div className="w-10 h-10 rounded-full overflow-hidden border border-amber-400/50 shadow-md shadow-amber-400/20 bg-black flex items-center justify-center shrink-0">
+            <img
+              src="/assets/images/logo.png"
+              alt="Nawabiyaat Admin"
+              className="w-full h-full object-cover"
+            />
           </div>
           <div>
             <div className="flex items-center gap-2">
@@ -807,9 +811,9 @@ export default function AdminDashboard() {
             
             {/* Modal Header */}
             <div className="flex items-center justify-between p-5 sm:p-6 border-b border-stone-800 bg-[#121520]">
-              <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-lg bg-amber-400/15 border border-amber-400/30 text-amber-300 flex items-center justify-center">
-                  <Crown className="w-4 h-4" />
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full overflow-hidden border border-amber-400/40 shrink-0 bg-black shadow-sm">
+                  <img src="/assets/images/logo.png" alt="Nawabiyaat" className="w-full h-full object-cover" />
                 </div>
                 <div>
                   <h3 className="font-serif font-bold text-base sm:text-lg text-white">

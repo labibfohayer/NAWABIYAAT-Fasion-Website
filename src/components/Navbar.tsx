@@ -70,10 +70,14 @@ export const Navbar: React.FC<NavbarProps> = ({
 
             <button
               onClick={() => onNavigate({ type: 'home' })}
-              className="flex items-center gap-2.5 group text-left cursor-pointer"
+              className="flex items-center gap-3 group text-left cursor-pointer"
             >
-              <div className="w-8 h-8 rounded-full bg-stone-900 text-amber-300 flex items-center justify-center border border-amber-400/40 shadow-sm">
-                <Crown className="w-4 h-4" />
+              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full overflow-hidden border border-amber-400/50 shadow-md shrink-0 bg-black flex items-center justify-center">
+                <img
+                  src="/assets/images/logo.png"
+                  alt="Nawabiyaat Royal Atelier"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                />
               </div>
               <div className="flex flex-col items-start">
                 <div className="flex items-baseline gap-1.5">
@@ -83,7 +87,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   <span className="text-[10px] text-amber-800 font-bold hidden sm:inline tracking-widest uppercase">ATELIER</span>
                 </div>
                 <span className="text-[8px] sm:text-[9px] tracking-[0.28em] text-stone-500 font-semibold uppercase mt-1 leading-none">
-                  ROYAL PANJABI ATELIER
+                  FASHION BEYOND TIME
                 </span>
               </div>
             </button>

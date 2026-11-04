@@ -19,6 +19,11 @@ export const metadata: Metadata = {
   title: "NAWABIYAAT — Royal Panjabi Atelier | Luxury Heritage Men's Fashion",
   description: "Royal heritage & luxury ethnic men's couture. 100% pure handloom silk, Varanasi katan, tailored kabli suit sets and wedding sherwanis.",
   keywords: "nawabiyaat, luxury panjabi, silk panjabi, wedding sherwani, katan panjabi, eid men fashion, couture atelier",
+  icons: {
+    icon: "/assets/images/logo.png",
+    shortcut: "/assets/images/logo.png",
+    apple: "/assets/images/logo.png",
+  },
 };
 
 export default function RootLayout({

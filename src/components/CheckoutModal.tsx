@@ -111,9 +111,9 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
         
         {/* Header */}
         <div className="flex items-center justify-between pb-4 border-b border-stone-200">
-          <div className="flex items-center gap-2.5">
-            <div className="w-9 h-9 bg-stone-100 flex items-center justify-center text-stone-900">
-              <Lock className="w-5 h-5" />
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-full overflow-hidden border border-amber-400/50 shadow-md shrink-0 bg-black">
+              <img src="/assets/images/logo.png" alt="Nawabiyaat" className="w-full h-full object-cover" />
             </div>
             <div>
               <h2 className="text-lg sm:text-xl font-bold font-sans uppercase tracking-wider text-stone-900">

@@ -29,8 +29,13 @@ export const OrderSuccessModal: React.FC<OrderSuccessModalProps> = ({ order, onC
         
         {/* Header */}
         <div className="text-center space-y-2">
-          <div className="w-16 h-16 bg-stone-100 rounded-full mx-auto flex items-center justify-center text-emerald-600">
-            <CheckCircle2 className="w-10 h-10" />
+          <div className="relative w-20 h-20 mx-auto">
+            <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-amber-400/60 shadow-lg bg-black">
+              <img src="/assets/images/logo.png" alt="Nawabiyaat Official" className="w-full h-full object-cover" />
+            </div>
+            <div className="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-emerald-600 text-white flex items-center justify-center shadow-md">
+              <CheckCircle2 className="w-4 h-4" />
+            </div>
           </div>
 
           <span className="text-[10px] font-bold tracking-[0.25em] text-stone-500 uppercase block">
