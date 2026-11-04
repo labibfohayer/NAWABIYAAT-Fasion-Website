@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 👑 নবাবিয়াত (NAWABIYAAT) — Royal Panjabi Atelier
 
-## Getting Started
+> **বাংলার ঐতিহ্যবাহী আভিজাত্য, খাঁটি মালবেরি সিল্ক ও আধুনিক লাক্সারি ফ্যাশনের ডিজিটাল অ্যাটেলিয়ার**
 
-First, run the development server:
+নবাবিয়াত (NAWABIYAAT) একটি হাই-এন্ড এথনিক মেনসওয়্যার ই-কমার্স ওয়েব প্ল্যাটফর্ম, যা বিশেষভাবে প্রিমিয়াম সিল্ক পাঞ্জাবি, বারাণসী কাতান, সালতানাত কাবলি সেট, বর ও ওয়েডিং শেরওয়ানি এবং খাঁটি উদ আতরের জন্য নির্মিত।
+
+---
+
+## 🌟 মূল বৈশিষ্ট্যসমূহ (Features)
+
+### ১. গ্রাহক অভিজ্ঞতা (Customer Experience)
+- **হাই-ফ্যাশন ইন্টারেক্টিভ হিরো স্টেজ**: ৩টি লাইভ লুকবুক (রয়্যাল সিল্ক, বারাণসী কাতান, সালতানাত কাবলি) সিলেকশন ও প্রাইস প্রিভিউ।
+- **এডিটরিয়াল ক্যাটাগরি গ্রিড**: রয়্যাল সিল্ক ফিচার হিরো ও ২×২ সিগনেচার কালেকশন গ্রিড।
+- **ডুয়াল ডিসপ্লে মোড**:
+  - **অটো-স্ক্রোল মোড (RTL Animation)**: ডান থেকে বামে নিরবচ্ছিন্ন স্মুথ স্ক্রোল।
+  - **ক্লাসিক গ্রিড ভিউ**: ৩ বা ৪ কলামের রেসপন্সিভ গ্রিড।
+- **৩:৪ পোর্ট্রেট ফ্যাশন কার্ড**: সাইজ পিলস (38, 40, 42, 44), উইশলিস্ট ও কুইক অ্যাড টু কার্ট।
+- **স্মার্ট সাইজ ক্যালকুলেটর (Size Advisor)**: উচ্চতা, ওজন ও ফিটিং পছন্দ অনুযায়ী সঠিক ইঞ্চি সাইজ নির্ধারণকারী এআই টুল।
+- **স্মার্ট শপিং ব্যাগ (Cart Drawer)**: ফ্রি ডেলিভারি প্রগ্রেস বার (৳৩,০০০+ অর্ডারে ফ্রি শিপিং) ও কুপন ডিসকাউন্ট ইঞ্জিন (`EID2026`, `NAWABI10`)।
+- **মাল্টি-মেথড চেকআউট (Checkout Modal)**: ক্যাশ অন ডেলিভারি (COD), বিকাশ (bKash) ও নগদ (Nagad) TrxID ভেরিফিকেশন সহ ডিজিটাল ইনভয়েস জেনারেটর (`NW-XXXXXX`)।
+- **যোগাযোগ ও ইনকোয়ারি পেজ (`/contact`)**: সরাসরি বার্তা বা ইমেইল পাঠানোর ফর্ম ও শোরুম লাউঞ্জের ঠিকানা।
+- **নবাবিয়াত হেরিটেজ স্টোরি (`/about`)**: ব্র্যান্ড ফিলোসফি ও ৪টি কারিগরি স্তম্ভ।
+- **ডিপ-ব্ল্যাক লাক্সারি ফুটার**: ৫-কলামের পরিচ্ছন্ন লেআউট, ৩টি ফ্ল্যাগশিপ শোরুম ও নিউজলেটার।
+
+### ২. 🛠️ পূর্ণাঙ্গ অ্যাডমিন কন্ট্রোল প্যানেল (`/admin`)
+- লিংক: `/admin` এ প্রবেশ করলেই সম্পূর্ণ অ্যাডমিন ড্যাশবোর্ড ওপেন হয়।
+- **প্রোডাক্ট অ্যাড, এডিট ও ডিলিট**: ৬টি ক্যাটাগরি (সিল্ক, কাতান, কাবলি, ওয়েডিং, সুতি, আতর), নাম, দাম, ছবি, ফেব্রিক, স্টক অন/অফ ও সাইজ কাস্টমাইজেশন।
+- **কম্পিউটার থেকে ছবি আপলোড**: যেকোনো ছবি ফাইল সরাসরি আপলোড ও লাইভ প্রিভিউ।
+- **রিয়েল-টাইম অটো-সিঙ্ক**: অ্যাডমিন প্যানেলে যেকোনো পরিবর্তন সেভ করলেই মূল ওয়েবসাইটে সাথে সাথে লাইভ আপডেট।
+- **লাইভ কাস্টমার অর্ডার ট্র্যাকিং**: গ্রাহকদের সকল অর্ডারের তালিকা ও স্ট্যাটাস (`Pending` ➔ `Confirmed` ➔ `Shipped` ➔ `Delivered`) পরিবর্তন।
+
+---
+
+## 💻 প্রযুক্তিগত কাঠামো (Tech Stack)
+
+- **Framework**: Next.js 16.4.5 (App Router, Turbopack)
+- **Library**: React 19
+- **Styling**: Tailwind CSS v4, Custom CSS Animations
+- **Icons**: Lucide React & Custom Brand SVGs
+- **Typography**: Playfair Display (Serif), Hind Siliguri (Bangla), Geist Sans
+- **State & Storage**: Reactive Web Storage Events & Local Storage Layer
+
+---
+
+## 🚀 লোকাল ডেভেলপমেন্ট সেটআপ (Getting Started)
 
 ```bash
+# ১. রিপোজিটরি ক্লোন করুন
+git clone https://github.com/labibfohayer/nawabiyaat-panjabi.git
+
+# ২. প্রজেক্ট ফোল্ডারে প্রবেশ করুন
+cd nawabiyaat-panjabi
+
+# ৩. ডিপেন্ডেন্সি ইনস্টল করুন
+npm install
+
+# ৪. ডেভেলপমেন্ট সার্ভার চালু করুন
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ব্রাউজারে ভিজিট করুন:
+- **মূল ওয়েবসাইট**: [http://localhost:3000](http://localhost:3000)
+- **অ্যাডমিন প্যানেল**: [http://localhost:3000/admin](http://localhost:3000/admin)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📄 লাইসেন্স (License)
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+© 2026 **NAWABIYAAT (নবাবিয়াত) Atelier**. সর্বস্বত্ব সংরক্ষিত।
