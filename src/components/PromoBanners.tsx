@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { ArrowRight, Crown, Sparkles, Gift } from 'lucide-react';
+import { ArrowRight, Crown, Gift } from 'lucide-react';
 
 interface PromoBannersProps {
   onExploreSilk: () => void;
@@ -10,7 +10,6 @@ interface PromoBannersProps {
 }
 
 export const PromoBanners: React.FC<PromoBannersProps> = ({
-  onExploreSilk,
   onExploreWedding,
   onShopBundle
 }) => {
@@ -31,11 +30,11 @@ export const PromoBanners: React.FC<PromoBannersProps> = ({
             </div>
 
             <h3 className="text-2xl sm:text-4xl font-serif font-black tracking-wide text-white uppercase leading-tight">
-              বরের জন্য নিখুঁত শেরওয়ানি ও কাস্টম ফিটিং
+              Bespoke Groom Sherwanis & Custom Tailoring
             </h3>
 
-            <p className="text-xs sm:text-sm text-stone-300 font-bangla leading-relaxed">
-              আপনার বিশেষ দিনের প্রতিটি মাপ নিখুঁত করতে আমাদের বনানী ও ধানমন্ডি লাউঞ্জে অভিজ্ঞ মাস্টার টেইলরদের সাথে সরাসরি অ্যাপয়েন্টমেন্ট বুকিং করুন।
+            <p className="text-xs sm:text-sm text-stone-300 leading-relaxed font-light">
+              Experience private fitting consultations with our master tailors at our Banani and Dhanmondi Lounges for your wedding day.
             </p>
           </div>
 
@@ -44,7 +43,7 @@ export const PromoBanners: React.FC<PromoBannersProps> = ({
               onClick={onExploreWedding}
               className="bg-amber-400 hover:bg-amber-300 text-black text-xs font-extrabold uppercase tracking-widest px-7 py-3.5 transition-all shadow-md flex items-center gap-2 cursor-pointer"
             >
-              <span>ওয়েডিং শেরওয়ানি কালেকশন</span>
+              <span>EXPLORE WEDDING COUTURE</span>
               <ArrowRight className="w-4 h-4 text-black group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
@@ -63,15 +62,15 @@ export const PromoBanners: React.FC<PromoBannersProps> = ({
           <div className="relative z-10 space-y-3">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/15 border border-red-500/30 text-red-300 text-[10px] font-bold uppercase tracking-widest">
               <Gift className="w-3.5 h-3.5 text-red-400" />
-              <span>SPECIAL EID BUNDLE BOX • SAVE ৳১,৫০০</span>
+              <span>SPECIAL EID BUNDLE BOX • SAVE BDT 1,500</span>
             </div>
 
             <h3 className="text-2xl sm:text-3xl font-serif font-black tracking-wide text-white uppercase leading-tight">
-              নবাবী রয়্যাল কম্বো বক্স
+              Royal Nawabi Curated Gift Box
             </h3>
 
-            <p className="text-xs text-stone-300 font-bangla leading-relaxed">
-              ১টি প্রিমিয়াম সিল্ক পাঞ্জাবি + টেইলর্ড কটন পায়জামা + ৬মিলি রয়েল উদ আতর গিফট প্যাকেজ।
+            <p className="text-xs text-stone-300 leading-relaxed font-light">
+              1 Signature Silk Panjabi + 1 Tailored Cotton Trouser + 1 Bottle (6ml) Aged Dehn Al Oud in an engraved wooden box.
             </p>
           </div>
 
@@ -80,7 +79,7 @@ export const PromoBanners: React.FC<PromoBannersProps> = ({
               onClick={onShopBundle}
               className="bg-white hover:bg-stone-200 text-black text-xs font-extrabold uppercase tracking-widest px-7 py-3.5 transition-all shadow-md flex items-center gap-2 cursor-pointer"
             >
-              <span>কম্বো অফার নিন</span>
+              <span>CLAIM BUNDLE OFFER</span>
               <ArrowRight className="w-4 h-4 text-black group-hover:translate-x-1 transition-transform" />
             </button>
           </div>

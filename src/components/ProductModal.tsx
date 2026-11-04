@@ -31,7 +31,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({
 
   const handleWhatsApp = () => {
     const text = encodeURIComponent(
-      `আসসালামু আলাইকুম নবাবিয়াত, আমি "${product.nameBangla}" (${product.nameEnglish}) - সাইজ: ${selectedSize} সম্পর্কে জানতে চাচ্ছি।\nমূল্য: ৳${product.price}`
+      `Hello Nawabiyaat Atelier, I would like to inquire about "${product.nameEnglish || product.nameBangla}" - Size: ${selectedSize}. Price: BDT ${product.price}`
     );
     window.open(`https://wa.me/8801700000000?text=${text}`, '_blank');
   };
@@ -89,11 +89,11 @@ export const ProductModal: React.FC<ProductModalProps> = ({
             {/* Price */}
             <div className="flex items-baseline gap-3 mt-3">
               <span className="text-2xl font-bold font-serif text-stone-950">
-                ৳{product.price.toLocaleString('en-US')}
+                BDT {product.price.toLocaleString('en-US')}
               </span>
               {product.originalPrice && (
                 <span className="text-sm text-stone-400 line-through">
-                  ৳{product.originalPrice.toLocaleString('en-US')}
+                  BDT {product.originalPrice.toLocaleString('en-US')}
                 </span>
               )}
               {product.discountPercentage && (
@@ -112,7 +112,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({
           {/* Fabric / Fragrance Specs */}
           {product.fabric && (
             <div className="text-xs text-stone-700 bg-stone-50 p-2.5 border border-stone-200">
-              <strong>ফেব্রিক স্পেসিফিকেশন:</strong> {product.fabric}
+              <strong>Fabric Specification:</strong> {product.fabric}
             </div>
           )}
 
@@ -128,7 +128,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({
           {product.colors && product.colors.length > 0 && (
             <div className="space-y-2">
               <span className="text-xs font-bold text-stone-800 uppercase tracking-wider">
-                কালার: <span className="font-normal text-stone-600">{selectedColor}</span>
+                Color: <span className="font-normal text-stone-600">{selectedColor}</span>
               </span>
               <div className="flex items-center gap-2">
                 {product.colors.map((c) => (
@@ -153,14 +153,14 @@ export const ProductModal: React.FC<ProductModalProps> = ({
             <div className="space-y-2">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-bold text-stone-800 uppercase tracking-wider">
-                  সাইজ নির্বাচন:
+                  Select Size:
                 </span>
                 <button
                   onClick={onOpenSizeAdvisor}
                   className="text-xs text-amber-800 hover:underline flex items-center gap-1 font-semibold cursor-pointer"
                 >
                   <Ruler className="w-3 h-3" />
-                  <span>স্মার্ট সাইজ গাইড</span>
+                  <span>Smart Size Guide</span>
                 </button>
               </div>
 
@@ -184,7 +184,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({
 
           {/* Quantity */}
           <div className="flex items-center gap-3 pt-1">
-            <span className="text-xs font-bold text-stone-800 uppercase tracking-wider">পরিমাণ:</span>
+            <span className="text-xs font-bold text-stone-800 uppercase tracking-wider">Quantity:</span>
             <div className="flex items-center border border-stone-300 bg-stone-50">
               <button
                 onClick={() => setQuantity(Math.max(1, quantity - 1))}
@@ -233,7 +233,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({
               className="w-full py-2.5 border border-emerald-600 bg-emerald-50 text-emerald-800 hover:bg-emerald-100 text-xs font-bold transition-colors flex items-center justify-center gap-2 cursor-pointer"
             >
               <MessageCircle className="w-4 h-4 text-emerald-600" />
-              <span>হোয়াটসঅ্যাপে সাইজ ও অর্ডার বিষয়ে কথা বলুন</span>
+              <span>Inquire via WhatsApp for Sizing & Orders</span>
             </button>
           </div>
 
@@ -241,15 +241,15 @@ export const ProductModal: React.FC<ProductModalProps> = ({
           <div className="grid grid-cols-3 gap-2 pt-3 border-t border-stone-200 text-[10px] text-stone-500 text-center">
             <div className="flex flex-col items-center gap-1">
               <Truck className="w-4 h-4 text-stone-700" />
-              <span>ক্যাশ অন ডেলিভারি</span>
+              <span>Cash on Delivery</span>
             </div>
             <div className="flex flex-col items-center gap-1">
               <RotateCcw className="w-4 h-4 text-stone-700" />
-              <span>৭ দিনে সহজ এক্সচেঞ্জ</span>
+              <span>7-Day Easy Exchange</span>
             </div>
             <div className="flex flex-col items-center gap-1">
               <ShieldCheck className="w-4 h-4 text-stone-700" />
-              <span>১০০% খাঁটি লাক্সারি ফেব্রিক</span>
+              <span>100% Authentic Luxury Fabric</span>
             </div>
           </div>
 

@@ -44,7 +44,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
       const discount = Math.min(500, subtotal);
       setAppliedCoupon({ code, discount });
     } else {
-      setCouponError('Invalid coupon! Try "EID2026" for 10% off or "NAWAB" for ৳500 off.');
+      setCouponError('Invalid coupon! Try "EID2026" for 10% off or "NAWAB" for BDT 500 off.');
     }
   };
 
@@ -82,7 +82,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                   <span className="text-emerald-700 font-bold">🎉 FREE DELIVERY UNLOCKED!</span>
                 ) : (
                   <span>
-                    Add <strong className="text-black font-bold">৳{amountNeeded.toLocaleString()}</strong> for Free Delivery
+                    Add <strong className="text-black font-bold">BDT {amountNeeded.toLocaleString()}</strong> for Free Delivery
                   </span>
                 )}
               </span>
@@ -174,7 +174,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                       </div>
 
                       <span className="text-xs sm:text-sm font-bold font-serif text-black">
-                        ৳{(item.price * item.quantity).toLocaleString('en-US')}
+                        BDT {(item.price * item.quantity).toLocaleString('en-US')}
                       </span>
                     </div>
                   </div>
@@ -211,7 +211,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                 {appliedCoupon && (
                   <div className="text-[11px] text-emerald-700 flex items-center gap-1 font-semibold pt-1">
                     <Check className="w-3 h-3" />
-                    <span>Coupon '{appliedCoupon.code}' applied (-৳{appliedCoupon.discount})</span>
+                    <span>Coupon '{appliedCoupon.code}' applied (-BDT {appliedCoupon.discount})</span>
                   </div>
                 )}
                 {couponError && <p className="text-[11px] text-red-600 pt-1">{couponError}</p>}
@@ -221,13 +221,13 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
               <div className="space-y-1.5 text-xs text-stone-600 border-t border-stone-200 pt-2 font-medium">
                 <div className="flex justify-between">
                   <span>Subtotal:</span>
-                  <span className="font-bold text-black">৳{subtotal.toLocaleString('en-US')}</span>
+                  <span className="font-bold text-black">BDT {subtotal.toLocaleString('en-US')}</span>
                 </div>
 
                 {appliedCoupon && (
                   <div className="flex justify-between text-emerald-700">
                     <span>Discount ({appliedCoupon.code}):</span>
-                    <span>-৳{appliedCoupon.discount.toLocaleString('en-US')}</span>
+                    <span>-BDT {appliedCoupon.discount.toLocaleString('en-US')}</span>
                   </div>
                 )}
 
@@ -238,7 +238,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
 
                 <div className="flex justify-between text-sm sm:text-base font-bold text-black border-t border-stone-300 pt-2">
                   <span>Estimated Total:</span>
-                  <span className="font-serif text-lg">৳{finalSubtotal.toLocaleString('en-US')}</span>
+                  <span className="font-serif text-lg">BDT {finalSubtotal.toLocaleString('en-US')}</span>
                 </div>
               </div>
 

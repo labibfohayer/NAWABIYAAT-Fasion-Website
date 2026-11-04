@@ -7,38 +7,38 @@ export const ClientTestimonials: React.FC = () => {
   const reviews = [
     {
       id: 1,
-      author: 'ব্যারিস্টার তানভীর আহমেদ',
-      location: 'গুলশান-২, ঢাকা',
-      product: 'রয়্যাল মিডনাইট জারি সিল্ক পাঞ্জাবি',
+      author: 'Barrister Tanveer Ahmed',
+      location: 'Gulshan-2, Dhaka',
+      product: 'Royal Midnight Zari Silk Panjabi',
       rating: 5,
-      comment: 'অনলাইনে কাপড় কিনতে সবসময় সংশয় কাজ করত, কিন্তু নবাবিয়াতের ফিনিশিং দেখার পর আমি মুগ্ধ! কাপড়ের গ্লস, কলারের সেলাই আর সাইজ ফিটিং একদম পারফেক্ট ছিল। ডেলিভারিও পেয়েছি ২ দিনের মধ্যে।',
-      date: '২ দিন আগে',
+      comment: 'I was hesitant about ordering ethnic couture online, but the craftsmanship of Nawabiyaat blew me away! The silk sheen, the collar posture, and the fit were immaculate. Delivered in 2 days.',
+      date: '2 days ago',
       avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80'
     },
     {
       id: 2,
-      author: 'মাহমুদুল হাসান ফুয়াদ',
-      location: 'ধানমন্ডি, ঢাকা',
-      product: 'আইভরি পার্ল বর ও ওয়েডিং শেরওয়ানি',
+      author: 'Mahmudul Hasan Fuad',
+      location: 'Dhanmondi, Dhaka',
+      product: 'Ivory Pearl Wedding Sherwani',
       rating: 5,
-      comment: 'আমার বিয়ের রিসেপশনের জন্য আইভরি পার্ল শেরওয়ানিটা নিয়েছিলাম। সবাই জিজ্ঞেস করছিল কোন ডিজাইনার হাউজ থেকে নেওয়া! কাপড়ের কোয়ালিটি ও সূক্ষ্ম মুক্তোর কাজ সত্যি রয়্যাল ছিল।',
-      date: '১ সপ্তাহ আগে',
+      comment: 'Wore the Ivory Pearl Sherwani for my wedding reception. Everyone was asking which luxury designer house I commissioned! The silk fabric and handcrafted pearls felt truly royal.',
+      date: '1 week ago',
       avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80'
     },
     {
       id: 3,
-      author: 'ইঞ্জিনিয়ার সাব্বির চৌধুরী',
-      location: 'খুলশী, চট্টগ্রাম',
-      product: 'সালতানাত জেট ব্ল্যাক কাবলি সেট',
+      author: 'Engr. Sabbir Chowdhury',
+      location: 'Khulshi, Chattogram',
+      product: 'Sultanate Jet Black Kabli Set',
       rating: 5,
-      comment: 'জেট ব্ল্যাক কাবলি সেটটা সত্যিই প্রিমিয়াম। কাপড় ধোয়ার পরেও রঙ বিন্দুমাত্র নষ্ট হয়নি আর ইস্ত্রি ছাড়াই অনেকক্ষণ চমৎকার থাকে। কাস্টমার কেয়ারের রেসপন্সও দারুণ।',
-      date: '২ সপ্তাহ আগে',
+      comment: 'The Jet Black Kabli Set is absolute luxury. The mercerized Egyptian cotton stays crisp without wrinkling, and the color depth remains pristine. Exceptional customer care too.',
+      date: '2 weeks ago',
       avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80'
     }
   ];
 
   return (
-    <section className="py-16 md:py-20 bg-white border-b border-stone-200 text-left">
+    <section className="py-16 md:py-20 bg-white border-b border-stone-200 text-left font-sans">
       <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
         
         {/* Header */}
@@ -48,12 +48,12 @@ export const ClientTestimonials: React.FC = () => {
             <span>NAWABIYAAT CLIENT DIARIES</span>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl font-black uppercase tracking-tight text-stone-900 font-sans">
-            গ্রাহকদের চোখে নবাবিয়াত অভিজ্ঞতা
+          <h2 className="text-2xl sm:text-3xl font-serif font-black uppercase tracking-tight text-stone-900">
+            Client Words & Experiences
           </h2>
 
-          <p className="text-xs sm:text-sm text-stone-600 font-bangla">
-            দেশজুড়ে হাজারো রুচিশীল ভদ্রলোকের আস্থা ও ভালোবাসার সত্য গল্প
+          <p className="text-xs sm:text-sm text-stone-600 font-light">
+            Genuine testimonials from gentlemen across the country who trust Nawabiyaat for their defining moments.
           </p>
         </div>
 
@@ -74,31 +74,34 @@ export const ClientTestimonials: React.FC = () => {
                   <Quote className="w-6 h-6 text-stone-300" />
                 </div>
 
-                <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-bangla italic">
+                <p className="text-xs sm:text-sm text-stone-700 leading-relaxed italic font-light">
                   "{rev.comment}"
                 </p>
 
-                <div className="text-[11px] text-amber-900 font-bold bg-amber-50/80 px-2.5 py-1 border border-amber-200/60 inline-block font-bangla">
-                  সংগ্রহ: {rev.product}
+                <div className="text-[11px] text-amber-900 font-bold bg-amber-50/80 px-2.5 py-1 border border-amber-200/60 inline-block">
+                  Curated Item: {rev.product}
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 pt-5 mt-5 border-t border-stone-200">
+              <div className="flex items-center gap-3 pt-6 mt-6 border-t border-stone-200">
                 <img
                   src={rev.avatar}
                   alt={rev.author}
                   className="w-10 h-10 rounded-full object-cover border border-stone-300"
                 />
                 <div>
-                  <div className="text-xs font-bold text-stone-900 flex items-center gap-1 font-bangla">
+                  <div className="flex items-center gap-1.5 font-bold text-stone-900 text-xs">
                     <span>{rev.author}</span>
-                    <span title="ভেরিফাইড ক্রেতা">
+                    <span title="Verified Client">
                       <CheckCircle className="w-3.5 h-3.5 text-emerald-600" />
                     </span>
                   </div>
-                  <div className="text-[11px] text-stone-500 font-bangla">{rev.location} • {rev.date}</div>
+                  <div className="text-[10px] text-stone-400">
+                    {rev.location} • {rev.date}
+                  </div>
                 </div>
               </div>
+
             </div>
           ))}
         </div>

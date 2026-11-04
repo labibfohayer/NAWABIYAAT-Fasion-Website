@@ -54,7 +54,7 @@ export const SizeAdvisorModal: React.FC<SizeAdvisorModalProps> = ({ isOpen, onCl
               <h2 className="text-lg sm:text-xl font-bold font-sans uppercase tracking-wider text-stone-900">
                 SMART SIZE ADVISOR & CHART
               </h2>
-              <p className="text-xs text-stone-500 font-bangla">সঠিক সাইজ নির্ধারণ করে শতভাগ মানানসই পোশাক বেছে নিন</p>
+              <p className="text-xs text-stone-500">Find your exact proportions for a tailored royal fit</p>
             </div>
           </div>
 
@@ -84,7 +84,7 @@ export const SizeAdvisorModal: React.FC<SizeAdvisorModalProps> = ({ isOpen, onCl
             <form onSubmit={handleCalculate} className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               <div>
                 <label className="block text-[11px] font-semibold text-stone-700 uppercase tracking-wider mb-1">
-                  উচ্চতা (HEIGHT)
+                  HEIGHT
                 </label>
                 <div className="flex gap-2">
                   <select
@@ -114,7 +114,7 @@ export const SizeAdvisorModal: React.FC<SizeAdvisorModalProps> = ({ isOpen, onCl
 
               <div>
                 <label className="block text-[11px] font-semibold text-stone-700 uppercase tracking-wider mb-1">
-                  ওজন (WEIGHT - KG)
+                  WEIGHT (KG)
                 </label>
                 <input
                   type="number"
@@ -123,22 +123,22 @@ export const SizeAdvisorModal: React.FC<SizeAdvisorModalProps> = ({ isOpen, onCl
                   value={weightKg}
                   onChange={(e) => setWeightKg(Number(e.target.value))}
                   className="w-full bg-white border border-stone-300 text-xs text-stone-900 p-2 focus:border-black rounded-none"
-                  placeholder="যেমন: 68"
+                  placeholder="e.g. 68"
                 />
               </div>
 
               <div>
                 <label className="block text-[11px] font-semibold text-stone-700 uppercase tracking-wider mb-1">
-                  ফিটিং পছন্দ (FIT)
+                  FIT PREFERENCE
                 </label>
                 <select
                   value={fitPreference}
                   onChange={(e) => setFitPreference(e.target.value as any)}
                   className="w-full bg-white border border-stone-300 text-xs text-stone-900 p-2 focus:border-black rounded-none cursor-pointer"
                 >
-                  <option value="regular">রেগুলার কম্ফোর্ট (Regular)</option>
-                  <option value="slim">বডি ফিট (Slim Fit)</option>
-                  <option value="loose">লুজ বা ট্র্যাডিশনাল (Loose)</option>
+                  <option value="regular">Regular Comfort</option>
+                  <option value="slim">Tailored Slim Fit</option>
+                  <option value="loose">Relaxed Traditional</option>
                 </select>
               </div>
 
@@ -158,9 +158,9 @@ export const SizeAdvisorModal: React.FC<SizeAdvisorModalProps> = ({ isOpen, onCl
                 <div className="flex items-center gap-2.5">
                   <CheckCircle2 className="w-5 h-5 text-amber-600" />
                   <div>
-                    <span className="text-xs text-stone-600">আপনার শারীরিক গঠনের জন্য প্রস্তাবিত সাইজ:</span>
+                    <span className="text-xs text-stone-600">Recommended size for your physique:</span>
                     <div className="text-base font-bold text-stone-950 font-sans tracking-wide">
-                      {calculatedSize} ({fitPreference === 'slim' ? 'স্লিম ফিট' : 'কম্ফোর্ট রেগুলার'})
+                      {calculatedSize} ({fitPreference === 'slim' ? 'Slim Fit' : 'Regular Comfort'})
                     </div>
                   </div>
                 </div>
@@ -174,18 +174,18 @@ export const SizeAdvisorModal: React.FC<SizeAdvisorModalProps> = ({ isOpen, onCl
           {/* Table */}
           <div>
             <h3 className="text-xs font-bold uppercase tracking-wider text-stone-900 mb-3">
-              পাঞ্জাবি ও কাবলি সাইজ মেজারমেন্ট (ইঞ্চিতে)
+              Panjabi & Kabli Measurement Chart (Inches)
             </h3>
 
             <div className="overflow-x-auto border border-stone-200">
               <table className="w-full text-left border-collapse text-xs">
                 <thead>
                   <tr className="bg-stone-100 text-stone-900 border-b border-stone-200 font-bold uppercase tracking-wider">
-                    <th className="p-3">সাইজ</th>
-                    <th className="p-3">বুক (CHEST)</th>
-                    <th className="p-3">ঝুল (LENGTH)</th>
-                    <th className="p-3">হাতা (SLEEVE)</th>
-                    <th className="p-3">কলার (COLLAR)</th>
+                    <th className="p-3">SIZE</th>
+                    <th className="p-3">CHEST</th>
+                    <th className="p-3">LENGTH</th>
+                    <th className="p-3">SLEEVE</th>
+                    <th className="p-3">COLLAR</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-stone-200 text-stone-700">
@@ -225,7 +225,7 @@ export const SizeAdvisorModal: React.FC<SizeAdvisorModalProps> = ({ isOpen, onCl
           <div className="p-3 bg-stone-100 flex items-start gap-2 text-xs text-stone-600">
             <Info className="w-4 h-4 text-stone-500 shrink-0 mt-0.5" />
             <p>
-              <strong>টিপস:</strong> আপনি যদি বুক ৩৮ ইঞ্চি মেপে থাকেন, তবে চলাফেরার আরামের জন্য ৪ ইঞ্চি লুজেনিং ধরে সাইজ ৪০ (বুক ৪২ ইঞ্চি পাঞ্জাবি) নির্বাচন করা উত্তম।
+              <strong>Styling Tip:</strong> If your body chest measures 38 inches, choosing size 40 (which provides a 42-inch garment chest) offers optimal drape, ease of movement, and regal comfort.
             </p>
           </div>
 

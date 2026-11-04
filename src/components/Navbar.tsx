@@ -34,8 +34,8 @@ export const Navbar: React.FC<NavbarProps> = ({
         <div className="max-w-[1800px] mx-auto flex items-center justify-between gap-4 font-sans tracking-wider uppercase">
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
-            <span className="text-stone-300 font-bangla text-xs">
-              ✨ নবাবিয়াত ঈদ ও ওয়েডিং কালেকশন ২০২৬ • সারা বাংলাদেশে ৩ দিনে ক্যাশ অন ডেলিভারি • ৳৩,০০০+ অর্ডারে ফ্রি শিপিং
+            <span className="text-stone-300 text-xs">
+              EID & WEDDING COLLECTION 2026 • 3-DAY EXPRESS DELIVERY NATIONWIDE • FREE SHIPPING OVER BDT 3,000
             </span>
           </div>
 
@@ -45,10 +45,10 @@ export const Navbar: React.FC<NavbarProps> = ({
               className="hover:text-white transition-colors flex items-center gap-1 cursor-pointer"
             >
               <Ruler className="w-3 h-3 text-amber-300" />
-              <span>স্মার্ট সাইজ ক্যালকুলেটর</span>
+              <span>Smart Size Calculator</span>
             </button>
             <a href="tel:+8801700000000" className="hover:text-white transition-colors">
-              হটলাইন: +880 1700-000000
+              Hotline: +880 1700-000000
             </a>
           </div>
         </div>
@@ -80,7 +80,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   <span className="font-serif text-2xl sm:text-3xl font-bold tracking-[0.16em] text-[#1c1917] leading-none uppercase">
                     NAWABIYAAT
                   </span>
-                  <span className="text-xs text-amber-800 font-bold hidden sm:inline font-bangla">নবাবিয়াত</span>
+                  <span className="text-[10px] text-amber-800 font-bold hidden sm:inline tracking-widest uppercase">ATELIER</span>
                 </div>
                 <span className="text-[8px] sm:text-[9px] tracking-[0.28em] text-stone-500 font-semibold uppercase mt-1 leading-none">
                   ROYAL PANJABI ATELIER
@@ -120,42 +120,42 @@ export const Navbar: React.FC<NavbarProps> = ({
                   onClick={() => onNavigate({ type: 'category', categoryId: 'silk' })}
                   className="w-full text-left px-4 py-2.5 text-xs hover:bg-stone-50 text-stone-700 hover:text-black font-semibold flex items-center justify-between cursor-pointer"
                 >
-                  <span>ROYAL SILK (রয়েল সিল্ক)</span>
+                  <span>ROYAL SILK PANJABI</span>
                   <span className="text-[10px] text-stone-400">→</span>
                 </button>
                 <button
                   onClick={() => onNavigate({ type: 'category', categoryId: 'katan' })}
                   className="w-full text-left px-4 py-2.5 text-xs hover:bg-stone-50 text-stone-700 hover:text-black font-semibold flex items-center justify-between cursor-pointer"
                 >
-                  <span>DESIGNER KATAN (কাতান)</span>
+                  <span>DESIGNER KATAN</span>
                   <span className="text-[10px] text-stone-400">→</span>
                 </button>
                 <button
                   onClick={() => onNavigate({ type: 'category', categoryId: 'kabli' })}
                   className="w-full text-left px-4 py-2.5 text-xs hover:bg-stone-50 text-stone-700 hover:text-black font-semibold flex items-center justify-between cursor-pointer"
                 >
-                  <span>KABLI SUIT SET (কাবলি সেট)</span>
+                  <span>KABLI SUIT SET</span>
                   <span className="text-[10px] text-stone-400">→</span>
                 </button>
                 <button
                   onClick={() => onNavigate({ type: 'category', categoryId: 'wedding' })}
                   className="w-full text-left px-4 py-2.5 text-xs hover:bg-stone-50 text-stone-700 hover:text-black font-semibold flex items-center justify-between cursor-pointer"
                 >
-                  <span>GROOM & WEDDING (বর শেরওয়ানি)</span>
+                  <span>GROOM & WEDDING</span>
                   <span className="text-[10px] text-stone-400">→</span>
                 </button>
                 <button
                   onClick={() => onNavigate({ type: 'category', categoryId: 'cotton' })}
                   className="w-full text-left px-4 py-2.5 text-xs hover:bg-stone-50 text-stone-700 hover:text-black font-semibold flex items-center justify-between cursor-pointer"
                 >
-                  <span>FINE COTTON (সুতি ও লিনেন)</span>
+                  <span>FINE COTTON & LINEN</span>
                   <span className="text-[10px] text-stone-400">→</span>
                 </button>
                 <button
                   onClick={() => onNavigate({ type: 'category', categoryId: 'attar' })}
                   className="w-full text-left px-4 py-2.5 text-xs hover:bg-stone-50 text-stone-700 hover:text-black font-semibold flex items-center justify-between cursor-pointer"
                 >
-                  <span>NAWABI OUD (আতর ও উদ)</span>
+                  <span>NAWABI OUD & ATTAR</span>
                   <span className="text-[10px] text-stone-400">→</span>
                 </button>
               </div>
@@ -214,7 +214,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             <div className="hidden md:flex items-center relative">
               <input
                 type="text"
-                placeholder="পাঞ্জাবি খুঁজুন..."
+                placeholder="Search panjabi, fabric..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-36 xl:w-52 bg-stone-50 border border-stone-200 text-xs px-3 py-2 pl-8 focus:outline-none focus:border-black rounded-none transition-all placeholder:text-stone-400"
@@ -246,12 +246,12 @@ export const Navbar: React.FC<NavbarProps> = ({
               title="Calculate your size"
             >
               <Ruler className="w-3.5 h-3.5 text-amber-700" />
-              <span>সাইজ গাইড</span>
+              <span>Size Guide</span>
             </button>
 
             {/* Wishlist Button */}
             <button
-              onClick={() => alert(`আপনার পছন্দের তালিকায় ${wishlistCount}টি পাঞ্জাবি সংরক্ষিত আছে!`)}
+              onClick={() => alert(`You have ${wishlistCount} item(s) in your wishlist!`)}
               className="relative p-2 text-stone-700 hover:text-black transition-colors cursor-pointer"
               title="Wishlist"
             >
@@ -269,7 +269,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               className="relative bg-black text-white px-4 py-2.5 rounded-none flex items-center gap-2 hover:bg-stone-800 transition-colors shadow-sm cursor-pointer"
             >
               <ShoppingBag className="w-4 h-4" />
-              <span className="text-xs font-bold uppercase tracking-wider hidden sm:inline">ব্যাগ</span>
+              <span className="text-xs font-bold uppercase tracking-wider hidden sm:inline">Bag</span>
               <span className="bg-amber-400 text-black text-[10px] font-bold px-1.5 py-0.2 rounded-full min-w-4 text-center">
                 {cartCount}
               </span>
@@ -284,7 +284,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             <div className="relative">
               <input
                 type="text"
-                placeholder="পাঞ্জাবির নাম, ফেব্রিক বা ক্যাটালগ খুঁজুন..."
+                placeholder="Search panjabi, fabric or collection..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full bg-stone-50 border border-stone-300 text-xs px-3 py-2 pl-9 focus:outline-none focus:border-black rounded-none"
@@ -305,7 +305,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               }}
               className="block w-full text-left py-2 hover:text-black cursor-pointer"
             >
-              HOME (হোম)
+              HOME
             </button>
             <button
               onClick={() => {
@@ -314,7 +314,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               }}
               className="block w-full text-left py-2 hover:text-black cursor-pointer"
             >
-              ROYAL SILK (রয়েল সিল্ক পাঞ্জাবি)
+              ROYAL SILK PANJABI
             </button>
             <button
               onClick={() => {
@@ -323,7 +323,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               }}
               className="block w-full text-left py-2 hover:text-black cursor-pointer"
             >
-              DESIGNER KATAN (কাতান পাঞ্জাবি)
+              DESIGNER KATAN
             </button>
             <button
               onClick={() => {
@@ -332,7 +332,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               }}
               className="block w-full text-left py-2 hover:text-black cursor-pointer"
             >
-              KABLI SUIT SET (কাবলি স্যুট)
+              KABLI SUIT SET
             </button>
             <button
               onClick={() => {
@@ -341,7 +341,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               }}
               className="block w-full text-left py-2 hover:text-black cursor-pointer"
             >
-              WEDDING & GROOM (বর ও শেরওয়ানি)
+              WEDDING & GROOM
             </button>
             <button
               onClick={() => {
@@ -350,7 +350,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               }}
               className="block w-full text-left py-2 hover:text-black cursor-pointer"
             >
-              ABOUT US (নবাবিয়াত হেরিটেজ)
+              ABOUT THE ATELIER
             </button>
             <button
               onClick={() => {
@@ -359,7 +359,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               }}
               className="block w-full text-left py-2 hover:text-black cursor-pointer"
             >
-              CONTACT (যোগাযোগ ও আউটলেট)
+              CONTACT & OUTLETS
             </button>
             <div className="pt-3 border-t border-stone-100 flex items-center justify-between">
               <button
@@ -369,7 +369,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 }}
                 className="text-amber-800 font-bold cursor-pointer"
               >
-                📏 স্মার্ট সাইজ ক্যালকুলেটর
+                📏 Smart Size Calculator
               </button>
               <a href="tel:+8801700000000" className="text-stone-500">
                 +880 1700-000000

@@ -36,13 +36,13 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onBackToHome, onExploreCol
           </div>
 
           <h1 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-stone-900 mb-4">
-            নবাবিয়াত (NAWABIYAAT) এর গল্প
+            THE STORY OF NAWABIYAAT
           </h1>
           <p className="text-sm font-semibold text-stone-700 mb-3">
-            রাজকীয় আভিজাত্যে আধুনিক রুচির এক অনন্য মেলবন্ধন
+            A Regal Fusion of Heritage Craftsmanship and Modern Sophistication
           </p>
-          <p className="text-xs text-stone-500 leading-relaxed max-w-2xl mx-auto font-bangla">
-            নবাবিয়াত শুধু একটি পোশাকের ব্র্যান্ড নয়—এটি বাংলার শতবর্ষের ঐতিহ্যবাহী তাঁতশিল্প, সুক্ষ্ম জারদৌসি সূচিকর্ম এবং আধুনিক পরিশীলিত কাটিংয়ের এক জীবন্ত প্রকাশ। প্রতিটি পুরুষের ব্যক্তিত্বে আভিজাত্য ফুটিয়ে তোলাই আমাদের মূল লক্ষ্য।
+          <p className="text-xs text-stone-500 leading-relaxed max-w-2xl mx-auto">
+            Nawabiyaat is more than an atelier—it is the living embodiment of Bengal’s centenary handloom weaving, intricate zardozi embroidery, and razor-sharp modern tailoring. Our mission is to bestow every modern gentleman with regal poise and distinctive refinement.
           </p>
         </div>
       </div>
@@ -56,13 +56,13 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onBackToHome, onExploreCol
               OUR PHILOSOPHY
             </span>
             <h2 className="text-2xl sm:text-3xl font-black uppercase text-black">
-              পরিশুদ্ধ কাপড়ে ঐতিহ্যের স্পর্শ
+              TOUCH OF NOBLE HERITAGE IN PURE FABRICS
             </h2>
-            <p className="text-xs text-stone-600 leading-relaxed font-bangla">
-              আমরা বিশ্বাস করি, প্রতিটি বিশেষ দিন এবং উৎসবের অন্যতম স্মৃতি জড়িয়ে থাকে আপনার পোশাকে। তাই নবাবিয়াতের প্রতিটি পাঞ্জাবিতে ব্যবহৃত হয় ১০০% পিওর মালবেরি সিল্ক, বারাণসী কাতান এবং খাঁটি সুতি ফেব্রিক।
+            <p className="text-xs text-stone-600 leading-relaxed">
+              We believe every momentous festival and landmark occasion is immortalized through what you wear. At Nawabiyaat, each silhouette is meticulously created from 100% pure Mulberry silk, Varanasi jacquard katan, and premium Egyptian cotton.
             </p>
-            <p className="text-xs text-stone-600 leading-relaxed font-bangla">
-              আমাদের ওস্তাদ কারিগররা প্রতিটি কলার, প্লেকেট এবং কাফে যত্নসহকারে অ্যান্টিক মেটালিক সুতা ও সিকুইন দিয়ে কাজ করেন, যা আপনাকে যেকোনো ভিড়ে আলাদা ব্যক্তিত্বের দ্যুতি এনে দেয়।
+            <p className="text-xs text-stone-600 leading-relaxed">
+              Our master artisans spend dozens of hours ornamenting every collar, placket, and cuff with antique metallic zari and delicate handwork—giving you an aura of unmistakable prestige in every gathering.
             </p>
 
             <div className="pt-2">
@@ -98,7 +98,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onBackToHome, onExploreCol
       <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 py-12 border-t border-stone-200">
         <div className="text-center mb-10">
           <h3 className="text-xl font-bold uppercase tracking-widest text-black">
-            আমাদের ৪টি অটল প্রতিশ্রুতি
+            OUR 4 PILLARS OF EXCELLENCE
           </h3>
           <div className="w-10 h-0.5 bg-black mx-auto mt-2"></div>
         </div>
@@ -106,33 +106,33 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onBackToHome, onExploreCol
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="p-6 bg-stone-50 border border-stone-200 space-y-2">
             <Feather className="w-6 h-6 text-amber-800" />
-            <h4 className="text-xs font-bold uppercase tracking-wider text-black">১০০% পিওর ফেব্রিক</h4>
-            <p className="text-xs text-stone-500 font-bangla leading-relaxed">
-              কোনো প্রকার সিন্থেটিক ভেজাল ছাড়া খাঁটি সিল্ক, ফাইন লিনেন ও প্রিমিয়াম সুতি কাপড়ের নিশ্চয়তা।
+            <h4 className="text-xs font-bold uppercase tracking-wider text-black">100% PURE FABRIC</h4>
+            <p className="text-xs text-stone-500 leading-relaxed">
+              Zero synthetic adulteration. Guaranteed pure Mulberry silk, fine linen, and premium mercerized cotton.
             </p>
           </div>
 
           <div className="p-6 bg-stone-50 border border-stone-200 space-y-2">
             <Scissors className="w-6 h-6 text-amber-800" />
-            <h4 className="text-xs font-bold uppercase tracking-wider text-black">মাস্টার কারিগরি</h4>
-            <p className="text-xs text-stone-500 font-bangla leading-relaxed">
-              অভিজ্ঞ টেইলার্স মাস্টারদের তত্ত্বাবধানে নিখুঁত শোল্ডার ড্রপ ও পারফেক্ট বডি ফিটিং কাটিং।
+            <h4 className="text-xs font-bold uppercase tracking-wider text-black">MASTER TAILORING</h4>
+            <p className="text-xs text-stone-500 leading-relaxed">
+              Sculpted shoulder drops, immaculate collar curves, and precision bespoke fits supervised by senior master tailors.
             </p>
           </div>
 
           <div className="p-6 bg-stone-50 border border-stone-200 space-y-2">
             <Sparkles className="w-6 h-6 text-amber-800" />
-            <h4 className="text-xs font-bold uppercase tracking-wider text-black">হ্যান্ডমেড কারুকাজ</h4>
-            <p className="text-xs text-stone-500 font-bangla leading-relaxed">
-              খাঁটি রেশমি সুতা ও মেটালিক জারি দিয়ে প্রতিটি পোশাকে দীর্ঘ সময় নিয়ে নিখুঁত সূচিকর্ম।
+            <h4 className="text-xs font-bold uppercase tracking-wider text-black">HANDCRAFTED ARTISANRY</h4>
+            <p className="text-xs text-stone-500 leading-relaxed">
+              Heirloom metallic zari, authentic zardozi, and hand-embroidered details that celebrate heritage artistry.
             </p>
           </div>
 
           <div className="p-6 bg-stone-50 border border-stone-200 space-y-2">
             <Award className="w-6 h-6 text-amber-800" />
-            <h4 className="text-xs font-bold uppercase tracking-wider text-black">সহজ সাইজ এক্সচেঞ্জ</h4>
-            <p className="text-xs text-stone-500 font-bangla leading-relaxed">
-              কোনো সাইজে সমস্যা হলে ৩ কার্যদিবসের মধ্যে দ্রুত ও সম্পূর্ণ ফ্রিতে সাইজ পরিবর্তনের সুযোগ।
+            <h4 className="text-xs font-bold uppercase tracking-wider text-black">COMPLIMENTARY EXCHANGE</h4>
+            <p className="text-xs text-stone-500 leading-relaxed">
+              Hassle-free size replacement and support within 3 business days across all districts of Bangladesh.
             </p>
           </div>
         </div>

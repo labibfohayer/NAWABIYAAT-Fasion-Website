@@ -149,7 +149,7 @@ export default function Home() {
       }
     });
 
-    showToast(`"${product.nameBangla}" ব্যাগে যুক্ত হয়েছে!`);
+    showToast(`"${product.nameEnglish}" added to your bag!`);
     setIsCartOpen(true);
     setSelectedProduct(null);
   };
@@ -171,16 +171,16 @@ export default function Home() {
       updated.splice(index, 1);
       return updated;
     });
-    showToast('পাঞ্জাবিটি ব্যাগ থেকে সরানো হয়েছে।');
+    showToast('Item removed from shopping bag.');
   };
 
   const handleToggleWishlist = (productId: string) => {
     setWishlist((prev) => {
       if (prev.includes(productId)) {
-        showToast('উইশলিস্ট থেকে সরানো হয়েছে');
+        showToast('Removed from wishlist');
         return prev.filter((id) => id !== productId);
       } else {
-        showToast('উইশলিস্টে যুক্ত করা হয়েছে! ❤️');
+        showToast('Added to wishlist! ❤️');
         return [...prev, productId];
       }
     });
@@ -309,11 +309,11 @@ export default function Home() {
                     <span>CURATED SIGNATURE ATELIER 2026</span>
                   </div>
                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-black uppercase tracking-tight text-stone-900">
-                    নবাবিয়াত সিগনেচার কালেকশন
+                    NAWABIYAAT SIGNATURE COLLECTION
                   </h2>
                 </div>
-                <p className="text-xs sm:text-sm text-stone-500 font-bangla max-w-md">
-                  শতভাগ খাঁটি সিল্ক, বারাণসী কাতান ও মাস্টার টেইলরিং—আপনার পছন্দের ক্যাটাগরি বেছে নিন।
+                <p className="text-xs sm:text-sm text-stone-500 max-w-md">
+                  Pure handloom silk, Varanasi katan, and tailored kabli suits. Choose your preferred collection.
                 </p>
               </div>
 
@@ -322,13 +322,13 @@ export default function Home() {
                 {/* Category Filter Tabs */}
                 <div className="flex items-center gap-2 overflow-x-auto text-[11px] uppercase tracking-wider font-semibold w-full lg:w-auto pb-2 lg:pb-0">
                   {[
-                    { id: 'all', label: 'All Items (সব)' },
-                    { id: 'silk', label: 'Royal Silk (সিল্ক)' },
-                    { id: 'katan', label: 'Katan (কাতান)' },
-                    { id: 'kabli', label: 'Kabli Suit (কাবলি)' },
-                    { id: 'wedding', label: 'Wedding (বর)' },
-                    { id: 'cotton', label: 'Cotton (সুতি)' },
-                    { id: 'attar', label: 'Nawabi Oud (আতর)' }
+                    { id: 'all', label: 'All Items' },
+                    { id: 'silk', label: 'Royal Silk' },
+                    { id: 'katan', label: 'Designer Katan' },
+                    { id: 'kabli', label: 'Kabli Suit Set' },
+                    { id: 'wedding', label: 'Wedding & Groom' },
+                    { id: 'cotton', label: 'Fine Cotton' },
+                    { id: 'attar', label: 'Nawabi Oud' }
                   ].map((tab) => (
                     <button
                       key={tab.id}
@@ -356,7 +356,7 @@ export default function Home() {
                       }`}
                       title="Continuous Right to Left Animation"
                     >
-                      <span>▶ অটো-স্ক্রোল</span>
+                      <span>▶ AUTO-SCROLL</span>
                     </button>
                     <button
                       onClick={() => setDisplayMode('grid')}
@@ -365,7 +365,7 @@ export default function Home() {
                       }`}
                       title="Classic Grid View"
                     >
-                      <span>▦ গ্রিড ভিউ</span>
+                      <span>▦ GRID VIEW</span>
                     </button>
                   </div>
 
@@ -436,8 +436,8 @@ export default function Home() {
                     ))}
                   </div>
 
-                  <p className="text-center text-xs text-stone-400 mt-6 flex items-center justify-center gap-1.5 font-bangla">
-                    <span>💡 মাউস কার্ডের ওপর নিলে অ্যানিমেশন থামবে, সহজে পছন্দমতো সাইজ দেখে "ADD TO CART" করতে পারবেন।</span>
+                  <p className="text-center text-xs text-stone-400 mt-6 flex items-center justify-center gap-1.5">
+                    <span>💡 Hover over any product card to pause auto-scroll and select size for one-click "ADD TO CART".</span>
                   </p>
                 </div>
               ) : (
@@ -465,7 +465,7 @@ export default function Home() {
                 const pj = products.find(x => x.id === 'nw-silk-01');
                 const at = products.find(x => x.id === 'nw-at-01');
                 if (pj) handleAddToCart(pj, 'L (40)', 'Pure Ivory Cream');
-                if (at) handleAddToCart(at, '6ml (রয়্যাল উডেন বক্স)', 'Golden Amber Essence');
+                if (at) handleAddToCart(at, '6ml (Royal Wooden Box)', 'Golden Amber Essence');
               }}
             />
 

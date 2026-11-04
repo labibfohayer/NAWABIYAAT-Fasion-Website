@@ -54,7 +54,7 @@ const DEFAULT_SAMPLE_ORDERS: CustomerOrder[] = [
     items: [
       {
         id: 'nw-silk-01',
-        nameBangla: 'রয়্যাল মিডনাইট জারি সিল্ক পাঞ্জাবি',
+        nameBangla: 'Royal Midnight Zari Silk Panjabi',
         nameEnglish: 'Royal Midnight Zari Silk Panjabi',
         price: 5850,
         image: '/assets/images/panjabi.jpg',
@@ -64,11 +64,11 @@ const DEFAULT_SAMPLE_ORDERS: CustomerOrder[] = [
       }
     ],
     customer: {
-      name: 'সাকিব আল হাসান',
+      name: 'Sakib Al Hasan',
       phone: '01711223344',
-      address: 'বাড়ি ১২, রোড ৭, সেক্টর ৪, উত্তরা, ঢাকা',
+      address: 'House 12, Road 7, Sector 4, Uttara, Dhaka',
       city: 'dhaka',
-      notes: 'বিকেলে ডেলিভারি দিলে ভালো হয়।'
+      notes: 'Please call before arrival in the afternoon.'
     },
     pricing: {
       subtotal: 5850,
@@ -79,7 +79,7 @@ const DEFAULT_SAMPLE_ORDERS: CustomerOrder[] = [
     },
     paymentMethod: 'bkash',
     paymentTrxId: 'BKASH92847192',
-    date: '৪ নভেম্বর ২০২৬, সকাল ১০:১৫',
+    date: 'Nov 4, 2026, 10:15 AM',
     status: 'Pending'
   },
   {
@@ -87,7 +87,7 @@ const DEFAULT_SAMPLE_ORDERS: CustomerOrder[] = [
     items: [
       {
         id: 'nw-katan-01',
-        nameBangla: 'ইম্পেরিয়াল বারাণসী উইভ কাতান পাঞ্জাবি',
+        nameBangla: 'Imperial Varanasi Weave Katan Panjabi',
         nameEnglish: 'Imperial Varanasi Weave Katan Panjabi',
         price: 6450,
         image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80',
@@ -97,9 +97,9 @@ const DEFAULT_SAMPLE_ORDERS: CustomerOrder[] = [
       }
     ],
     customer: {
-      name: 'তানভীর চৌধুরী',
+      name: 'Tanvir Chowdhury',
       phone: '01819876543',
-      address: 'হোল্ডিং ৪৫, ওআর নিজাম রোড, নাসিরাবাদ, চট্টগ্রাম',
+      address: 'Holding 45, OR Nizam Road, Nasirabad, Chattogram',
       city: 'outside-dhaka'
     },
     pricing: {
@@ -109,7 +109,7 @@ const DEFAULT_SAMPLE_ORDERS: CustomerOrder[] = [
       total: 6450
     },
     paymentMethod: 'cod',
-    date: '৩ নভেম্বর ২০২৬, বিকাল ৪:৩০',
+    date: 'Nov 3, 2026, 04:30 PM',
     status: 'Processing'
   }
 ];

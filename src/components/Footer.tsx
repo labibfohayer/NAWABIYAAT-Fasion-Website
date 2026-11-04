@@ -13,7 +13,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenSizeAdvisor, onNavigate })
     <footer className="bg-[#090a0d] text-stone-300 pt-16 md:pt-20 pb-12 border-t border-stone-800 text-left font-sans">
       <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
         
-        {/* Main 5-Column Grid matching user's preferred layout */}
+        {/* Main 5-Column Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-14 border-b border-stone-800/80">
           
           {/* 1. Brand Info */}
@@ -32,8 +32,8 @@ export const Footer: React.FC<FooterProps> = ({ onOpenSizeAdvisor, onNavigate })
               </div>
             </div>
 
-            <p className="text-xs text-stone-400 leading-relaxed font-bangla">
-              বাংলার সর্বশ্রেষ্ঠ তাঁত ঐতিহ্য ও খাঁটি মালবেরি সিল্কের মেলবন্ধনে তৈরি আধুনিক পুরুষের রাজকীয় পাঞ্জাবি সম্ভার।
+            <p className="text-xs text-stone-400 leading-relaxed font-light">
+              Centuries of Bengal weaving heritage and 100% pure mulberry silk tailored for the modern discerning gentleman.
             </p>
 
             {/* Social Pills: IG, FB, WA */}
@@ -170,7 +170,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenSizeAdvisor, onNavigate })
               </li>
               <li>
                 <span className="hover:text-white transition-colors cursor-pointer">
-                  3 DAY FREE EXCHANGE
+                  3-DAY FREE EXCHANGE
                 </span>
               </li>
             </ul>
@@ -183,16 +183,16 @@ export const Footer: React.FC<FooterProps> = ({ onOpenSizeAdvisor, onNavigate })
             </h4>
             <div className="space-y-3 text-xs text-stone-400">
               <div>
-                <p className="font-bold text-stone-200">বনানী ফ্ল্যাগশিপ:</p>
-                <p className="text-[11px] text-stone-400">রোড ১১, ব্লক বি, বনানী, ঢাকা</p>
+                <p className="font-bold text-stone-200">Banani Flagship Lounge:</p>
+                <p className="text-[11px] text-stone-400">Road 11, Block B, Banani, Dhaka</p>
               </div>
               <div>
-                <p className="font-bold text-stone-200">ধানমন্ডি অ্যাটেলিয়ার:</p>
-                <p className="text-[11px] text-stone-400">শিমুলতলা রোড, ধানমন্ডি ২৭, ঢাকা</p>
+                <p className="font-bold text-stone-200">Dhanmondi Atelier:</p>
+                <p className="text-[11px] text-stone-400">Shimultola Road, Dhanmondi 27, Dhaka</p>
               </div>
               <div>
-                <p className="font-bold text-stone-200">চট্টগ্রাম ডিসপ্লে:</p>
-                <p className="text-[11px] text-stone-400">জিইসি মোড়, সিডিএ এভিনিউ, চট্টগ্রাম</p>
+                <p className="font-bold text-stone-200">Chattogram Display Center:</p>
+                <p className="text-[11px] text-stone-400">GEC Circle, CDA Avenue, Chattogram</p>
               </div>
             </div>
           </div>
@@ -202,20 +202,20 @@ export const Footer: React.FC<FooterProps> = ({ onOpenSizeAdvisor, onNavigate })
             <h4 className="text-xs font-bold uppercase tracking-widest text-white mb-4 font-serif">
               NEWSLETTER
             </h4>
-            <p className="text-xs text-stone-400 mb-3 leading-relaxed font-bangla">
-              নতুন ঈদ ড্রপ ও ভিআইপি ডিসকাউন্ট পেতে ইমেইল সাবস্ক্রাইব করুন।
+            <p className="text-xs text-stone-400 mb-3 leading-relaxed">
+              Subscribe to receive exclusive previews of new drops and private VIP offerings.
             </p>
             <form 
               onSubmit={(e) => { 
                 e.preventDefault(); 
-                alert('ধন্যবাদ! নবাবিয়াত এক্সক্লুসিভ ক্লাবে আপনি সাবস্ক্রাইব করেছেন।'); 
+                alert('Thank you for subscribing to the Nawabiyaat Exclusive Club.'); 
               }} 
               className="flex items-center"
             >
               <input 
                 type="email" 
                 required 
-                placeholder="Enter your email" 
+                placeholder="Enter your email..." 
                 className="w-full bg-stone-900 border border-stone-700 text-xs px-3.5 py-3 text-white outline-none focus:border-amber-400 rounded-none placeholder-stone-500"
               />
               <button 
@@ -232,18 +232,18 @@ export const Footer: React.FC<FooterProps> = ({ onOpenSizeAdvisor, onNavigate })
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500">
           <p className="flex items-center gap-2">
-            <span>© 2026 NAWABIYAAT (নবাবিয়াত) Atelier. সর্বস্বত্ব সংরক্ষিত।</span>
+            <span>© 2026 NAWABIYAAT Atelier. All rights reserved.</span>
             <span className="text-stone-700">|</span>
             <a href="/admin" target="_blank" className="text-stone-400 hover:text-amber-400 transition-colors text-[11px] underline">
-              🔒 এডমিন প্যানেল
+              🔒 Admin Panel
             </a>
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3 text-stone-400">
-            <span className="text-stone-300 font-semibold">ক্যাশ অন ডেলিভারি</span>
+            <span className="text-stone-300 font-semibold">Cash on Delivery</span>
             <span>•</span>
-            <span className="text-stone-300 font-semibold">বিকাশ (bKash)</span>
+            <span className="text-stone-300 font-semibold">bKash</span>
             <span>•</span>
-            <span className="text-stone-300 font-semibold">নগদ (Nagad)</span>
+            <span className="text-stone-300 font-semibold">Nagad</span>
             <span>•</span>
             <span className="text-stone-300 font-semibold">VISA / MASTERCARD</span>
           </div>

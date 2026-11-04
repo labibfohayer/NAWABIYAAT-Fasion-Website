@@ -83,7 +83,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
               className="w-full py-2 bg-black/85 hover:bg-black text-white text-[11px] font-bold uppercase tracking-wider backdrop-blur-md rounded-lg flex items-center justify-center gap-1.5 shadow-lg cursor-pointer transition-colors"
             >
               <Eye className="w-3.5 h-3.5" />
-              <span>বিস্তারিত দেখুন (QUICK VIEW)</span>
+              <span>QUICK VIEW</span>
             </button>
           </div>
         </div>
@@ -115,24 +115,20 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 
           <h3 
             onClick={() => onOpenDetails(product)}
-            className="font-bold text-stone-900 text-sm sm:text-base leading-snug hover:text-amber-800 cursor-pointer line-clamp-1 mb-1 font-bangla"
-            title={product.nameBangla}
+            className="font-bold text-stone-900 text-sm sm:text-base leading-snug hover:text-amber-800 cursor-pointer line-clamp-1 mb-1 font-serif"
+            title={product.nameEnglish || product.nameBangla}
           >
-            {product.nameBangla}
+            {product.nameEnglish || product.nameBangla}
           </h3>
 
-          <p className="text-[11px] text-stone-400 font-sans tracking-wide uppercase truncate mb-2">
-            {product.nameEnglish}
-          </p>
-
-          <p className="text-[11px] text-stone-500 truncate mb-3 font-bangla">
+          <p className="text-[11px] text-stone-500 truncate mb-3">
             ✓ {product.fabric}
           </p>
 
           {/* Quick Size Pill Selector */}
           {product.sizes && product.sizes.length > 0 && product.category !== 'attar' && (
             <div className="mb-3 flex items-center gap-1.5">
-              <span className="text-[10px] text-stone-400 uppercase font-semibold">সাইজ:</span>
+              <span className="text-[10px] text-stone-400 uppercase font-semibold">SIZE:</span>
               <div className="flex items-center gap-1">
                 {product.sizes.map((s) => (
                   <button
@@ -157,11 +153,11 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           {/* Price */}
           <div className="flex items-baseline gap-2 pt-1 border-t border-stone-100">
             <span className="text-base sm:text-lg font-bold text-stone-950 font-serif">
-              ৳{product.price.toLocaleString('en-US')}
+              BDT {product.price.toLocaleString('en-US')}
             </span>
             {product.originalPrice && (
               <span className="text-xs text-stone-400 line-through">
-                ৳{product.originalPrice.toLocaleString('en-US')}
+                BDT {product.originalPrice.toLocaleString('en-US')}
               </span>
             )}
           </div>
@@ -182,12 +178,12 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           {isAddedToast ? (
             <>
               <Check className="w-4 h-4 text-white" />
-              <span>কার্টে যুক্ত হয়েছে!</span>
+              <span>ADDED TO BAG!</span>
             </>
           ) : (
             <>
               <ShoppingBag className="w-3.5 h-3.5 text-amber-300" />
-              <span>কার্টে যোগ করুন</span>
+              <span>ADD TO CART</span>
             </>
           )}
         </button>

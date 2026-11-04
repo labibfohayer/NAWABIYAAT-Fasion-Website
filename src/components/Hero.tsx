@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Crown, ArrowRight, Ruler, Sparkles, ShieldCheck, Truck, Scissors, RotateCcw } from 'lucide-react';
+import { Crown, ArrowRight, Ruler, Truck, Scissors, RotateCcw } from 'lucide-react';
 
 interface HeroProps {
   onExploreClick: () => void;
@@ -16,34 +16,34 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onOpenSizeAdvisor })
       id: 'silk',
       badge: 'SIGNATURE ATELIER PIECE',
       titleEnglish: 'ROYAL MULBERRY',
-      titleBangla: 'খাঁটি সিল্ক পাঞ্জাবি',
-      subtitle: 'Pure Mulberry Silk with Antique Golden Zari Work',
-      desc: 'শতভাগ খাঁটি মালবেরি রেশম সুতা, সূক্ষ্ম হ্যান্ডক্রাফটেড জারি কলার এবং নবাবিয়াতের নিজস্ব ওস্তাদ কারিগরদের নিখুঁত মাস্টার কাটিং।',
-      price: '৳৪,৮৫০',
+      title: 'Royal Mulberry Silk Panjabi',
+      subtitle: 'Pure Handloom Silk with Antique Golden Zari Embroidery',
+      desc: 'Crafted from 100% pure mulberry handloom silk threads, accented with antique handcrafted zardozi collar embroidery and precision bespoke tailoring.',
+      price: 'BDT 5,850',
       image: '/assets/images/panjabi.jpg',
-      modelTag: 'মডেল পরিহিত: রয়্যাল মিডনাইট জারি সিল্ক'
+      modelTag: 'Model Wearing: Royal Midnight Zari Silk'
     },
     {
       id: 'katan',
       badge: 'FESTIVE WEDDING COUTURE',
       titleEnglish: 'IMPERIAL KATAN',
-      titleBangla: 'বারাণসী কাতান পাঞ্জাবি',
+      title: 'Imperial Varanasi Katan Panjabi',
       subtitle: 'Varanasi Jacquard Weave with Antique Brass Buttons',
-      desc: 'বারাণসী উইভ পিওর কাতান সিল্কের ওপর সূক্ষ্ম মিনাকারি কলার কাজ—ঈদ ও বিশেষ পারিবারিক আয়োজনের রাজকীয় আভিজাত্য।',
-      price: '৳৫,৪৫০',
+      desc: 'Woven with Varanasi heritage pure katan silk, ornate minakari detailing, and heirloom brass buttonwork for festive grandeur.',
+      price: 'BDT 6,400',
       image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80',
-      modelTag: 'মডেল পরিহিত: ইম্পেরিয়াল এমারেল্ড কাতান'
+      modelTag: 'Model Wearing: Imperial Emerald Katan'
     },
     {
       id: 'kabli',
       badge: 'EXECUTIVE SULTANATE SUIT',
       titleEnglish: 'SULTANATE KABLI',
-      titleBangla: 'সালতানাত কাবলি সেট',
+      title: 'Sultanate Jet Black Kabli Set',
       subtitle: 'Super 120s Egyptian Mercerized Cotton Set',
-      desc: 'সুপার ১২০স ইজিপশিয়ান মারসেরাইজড কটন ও অ্যান্টি-রিঙ্কেল ফেব্রিক—ম্যাচিং টেইলর্ড পায়জামা সহ পূর্ণাঙ্গ সেট।',
-      price: '৳৩,৯৫০',
+      desc: 'Engineered from wrinkle-free Egyptian mercerized cotton. Includes tailored panjabi and matching comfort trouser pyjama set.',
+      price: 'BDT 4,950',
       image: '/assets/images/jubbah.jpg',
-      modelTag: 'মডেল পরিহিত: জেট ব্ল্যাক কাবলি সেট'
+      modelTag: 'Model Wearing: Jet Black Kabli Set'
     }
   ];
 
@@ -76,10 +76,10 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onOpenSizeAdvisor })
             </span>
           </div>
 
-          <div className="hidden md:flex items-center gap-4 text-xs text-amber-300/90 font-bangla">
-            <span>✨ ১০০% খাঁটি ফেব্রিক গ্যারান্টি</span>
+          <div className="hidden md:flex items-center gap-4 text-xs text-amber-300/90 tracking-wider uppercase font-semibold">
+            <span>✨ 100% PURE HEIRLOOM FABRIC</span>
             <span>•</span>
-            <span>৩ দিনে সারা দেশে হোম ডেলিভারি</span>
+            <span>EXPRESS NATIONWIDE DELIVERY</span>
           </div>
         </div>
 
@@ -101,7 +101,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onOpenSizeAdvisor })
                 {current.titleEnglish}
               </span>
               <h1 className="text-4xl sm:text-6xl xl:text-7xl font-serif font-black tracking-tight text-white leading-[1.05]">
-                {current.titleBangla}
+                {current.title}
               </h1>
               <p className="text-amber-200/90 text-sm sm:text-base font-serif italic pt-1">
                 "{current.subtitle}"
@@ -109,14 +109,14 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onOpenSizeAdvisor })
             </div>
 
             {/* Description */}
-            <p className="text-stone-300 text-xs sm:text-sm md:text-base font-bangla leading-relaxed max-w-2xl font-light">
+            <p className="text-stone-300 text-xs sm:text-sm md:text-base leading-relaxed max-w-2xl font-light">
               {current.desc}
             </p>
 
             {/* Price & Primary Actions */}
             <div className="pt-2 flex flex-wrap items-center gap-4 sm:gap-6">
               <div className="flex flex-col">
-                <span className="text-[10px] uppercase tracking-widest text-stone-400">প্রারম্ভিক মূল্য</span>
+                <span className="text-[10px] uppercase tracking-widest text-stone-400">STARTING AT</span>
                 <span className="text-2xl sm:text-3xl font-serif font-bold text-amber-300 leading-none">
                   {current.price}
                 </span>
@@ -129,7 +129,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onOpenSizeAdvisor })
                   onClick={onExploreClick}
                   className="px-8 py-4 bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 hover:brightness-110 text-black font-extrabold text-xs uppercase tracking-widest transition-all shadow-lg shadow-amber-500/20 flex items-center gap-2 cursor-pointer"
                 >
-                  <span>কালেকশন দেখুন</span>
+                  <span>EXPLORE COLLECTION</span>
                   <ArrowRight className="w-4 h-4 text-black" />
                 </button>
 
@@ -138,7 +138,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onOpenSizeAdvisor })
                   className="px-6 py-4 bg-stone-900/90 hover:bg-stone-800 text-stone-200 border border-stone-700 hover:border-amber-400/60 font-bold text-xs uppercase tracking-wider transition-all flex items-center gap-2 cursor-pointer"
                 >
                   <Ruler className="w-4 h-4 text-amber-400" />
-                  <span>সাইজ ক্যালকুলেটর</span>
+                  <span>SMART SIZE CALCULATOR</span>
                 </button>
               </div>
             </div>
@@ -146,7 +146,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onOpenSizeAdvisor })
             {/* Interactive Look Tabs */}
             <div className="pt-6 border-t border-stone-800/80">
               <span className="text-[10px] uppercase tracking-widest text-stone-400 font-bold block mb-3">
-                FEATURED LOOKS (লুকবুক নির্বাচন করুন):
+                FEATURED LOOKS (SELECT ATELIER LOOK):
               </span>
               <div className="grid grid-cols-3 gap-3 max-w-xl">
                 {heroLooks.map((look, idx) => (
@@ -160,7 +160,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onOpenSizeAdvisor })
                     }`}
                   >
                     <span className="text-[10px] block font-mono text-amber-400">0{idx + 1}</span>
-                    <span className="text-xs font-bold block truncate text-stone-200">{look.titleBangla}</span>
+                    <span className="text-xs font-bold block truncate text-stone-200">{look.title}</span>
                     <span className="text-[10px] text-stone-400 block truncate">{look.price}</span>
                   </button>
                 ))}
@@ -178,7 +178,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onOpenSizeAdvisor })
             <div className="relative w-full max-w-[440px] aspect-[3/4] rounded-2xl overflow-hidden border-2 border-amber-400/30 bg-stone-900 shadow-2xl">
               <img
                 src={current.image}
-                alt={current.titleBangla}
+                alt={current.title}
                 className="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-105"
               />
 
@@ -191,7 +191,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onOpenSizeAdvisor })
                   <span className="text-[10px] text-amber-400 font-bold uppercase tracking-wider block">
                     EXCLUSIVE COUTURE
                   </span>
-                  <p className="text-xs font-bold text-white font-bangla">
+                  <p className="text-xs font-bold text-white">
                     {current.modelTag}
                   </p>
                 </div>
@@ -207,7 +207,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onOpenSizeAdvisor })
 
       </div>
 
-      {/* Integrated Luxury Royal Trust Bar (Replacing generic 4 white boxes) */}
+      {/* Integrated Luxury Royal Trust Bar */}
       <div className="bg-[#0c0d12] border-t border-b border-stone-800 py-6">
         <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
@@ -218,8 +218,8 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onOpenSizeAdvisor })
                 <Crown className="w-5 h-5 text-amber-400" />
               </div>
               <div className="text-left">
-                <h4 className="text-xs font-bold text-white uppercase tracking-wider">১০০% খাঁটি ফেব্রিক</h4>
-                <p className="text-[11px] text-stone-400 font-bangla">বিশুদ্ধ মালবেরি সিল্ক ও কাতান</p>
+                <h4 className="text-xs font-bold text-white uppercase tracking-wider">100% PURE FABRIC</h4>
+                <p className="text-[11px] text-stone-400">Pure Mulberry Silk & Varanasi Katan</p>
               </div>
             </div>
 
@@ -229,8 +229,8 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onOpenSizeAdvisor })
                 <Truck className="w-5 h-5 text-amber-400" />
               </div>
               <div className="text-left">
-                <h4 className="text-xs font-bold text-white uppercase tracking-wider">সারা দেশে ৩ দিনে ক্যাশ অন</h4>
-                <p className="text-[11px] text-stone-400 font-bangla">৳৩,০০০+ অর্ডারে সম্পূর্ণ ফ্রি শিপিং</p>
+                <h4 className="text-xs font-bold text-white uppercase tracking-wider">EXPRESS DELIVERY</h4>
+                <p className="text-[11px] text-stone-400">Free Shipping on Orders BDT 3,000+</p>
               </div>
             </div>
 
@@ -240,8 +240,8 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onOpenSizeAdvisor })
                 <Scissors className="w-5 h-5 text-amber-400" />
               </div>
               <div className="text-left">
-                <h4 className="text-xs font-bold text-white uppercase tracking-wider">ওস্তাদ মাস্টার টেইলরিং</h4>
-                <p className="text-[11px] text-stone-400 font-bangla">নিখুঁত ফিটিং ও দীর্ঘস্থায়ী সেলাই</p>
+                <h4 className="text-xs font-bold text-white uppercase tracking-wider">MASTER TAILORING</h4>
+                <p className="text-[11px] text-stone-400">Precision Bespoke Collar & Fit</p>
               </div>
             </div>
 
@@ -251,8 +251,8 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onOpenSizeAdvisor })
                 <RotateCcw className="w-5 h-5 text-amber-400" />
               </div>
               <div className="text-left">
-                <h4 className="text-xs font-bold text-white uppercase tracking-wider">৩ দিনের ফ্রি এক্সচেঞ্জ</h4>
-                <p className="text-[11px] text-stone-400 font-bangla">সহজ ও শতভাগ নিরাপদ পরিবর্তন</p>
+                <h4 className="text-xs font-bold text-white uppercase tracking-wider">3-DAY EASY EXCHANGE</h4>
+                <p className="text-[11px] text-stone-400">100% Risk-Free Size Exchange</p>
               </div>
             </div>
 

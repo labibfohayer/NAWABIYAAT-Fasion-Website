@@ -19,11 +19,11 @@ export const Categories: React.FC<CategoriesProps> = ({ onSelectCategory }) => {
             <span>CURATED CATEGORIES</span>
           </div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-black uppercase tracking-tight text-stone-900">
-            কালেকশন অনুযায়ী বেছে নিন
+            EXPLORE BY CATEGORY
           </h2>
         </div>
-        <p className="text-xs sm:text-sm text-stone-500 font-bangla max-w-md">
-          রয়েল সিল্ক থেকে শুরু করে বর শেরওয়ানি ও আধুনিক কাবলি—প্রতিটি কালেকশনে রয়েছে আভিজাত্যের অনন্য ছোঁয়া।
+        <p className="text-xs sm:text-sm text-stone-500 max-w-md">
+          From pure handloom mulberry silk to majestic wedding sherwanis and tailored kabli suits—each collection embodies royal distinction.
         </p>
       </div>
 
@@ -45,20 +45,20 @@ export const Categories: React.FC<CategoriesProps> = ({ onSelectCategory }) => {
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-6 sm:p-10">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-400/20 border border-amber-400/40 text-amber-300 text-[10px] font-bold uppercase tracking-widest mb-3 w-fit">
               <Sparkles className="w-3 h-3 text-amber-400" />
-              <span>FLIP-THROUGH EDITORIAL • ১২+ নতুন ড্রপ</span>
+              <span>FLIP-THROUGH EDITORIAL • 12+ NEW DROPS</span>
             </div>
 
             <h3 className="text-2xl sm:text-4xl font-serif font-bold text-white uppercase tracking-wide mb-2 leading-tight">
               ROYAL SILK PANJABI<br />
-              <span className="text-amber-300 font-bangla font-normal text-xl sm:text-2xl">খাঁটি মালবেরি সিল্ক পাঞ্জাবি</span>
+              <span className="text-amber-300 font-serif italic font-normal text-xl sm:text-2xl">Pure Mulberry Silk Heritage</span>
             </h3>
 
-            <p className="text-xs sm:text-sm text-stone-300 font-bangla mb-6 max-w-md line-clamp-2">
-              শতভাগ প্রাকৃতিক রেশম সুতায় নিখুঁত বোনা ড্র্যাপ ও জারি সূচিকর্ম। ঈদ ও বিশেষ আয়োজনে সেরা পছন্দ।
+            <p className="text-xs sm:text-sm text-stone-300 mb-6 max-w-md line-clamp-2 font-light">
+              100% natural silk threads handwoven with antique metallic zari work and master comfort cuts. The definitive choice for festive elegance.
             </p>
 
             <div className="flex items-center gap-2 text-xs font-bold text-black uppercase tracking-widest bg-amber-400 group-hover:bg-amber-300 px-6 py-3 rounded-none w-fit transition-colors shadow-lg">
-              <span>কালেকশন এক্সপ্লোর করুন</span>
+              <span>EXPLORE COLLECTION</span>
               <ArrowRight className="w-4 h-4 text-black group-hover:translate-x-1 transition-transform" />
             </div>
           </div>
@@ -84,8 +84,8 @@ export const Categories: React.FC<CategoriesProps> = ({ onSelectCategory }) => {
               <h4 className="text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wide">
                 DESIGNER KATAN
               </h4>
-              <p className="text-xs text-amber-200 font-bangla mb-3">
-                বারাণসী কাতান কালেকশন
+              <p className="text-xs text-amber-200 mb-3">
+                Varanasi Pure Katan Collection
               </p>
               <span className="text-[10px] font-bold text-white uppercase tracking-wider flex items-center gap-1 group-hover:text-amber-300 transition-colors">
                 <span>VIEW MORE</span>
@@ -111,8 +111,8 @@ export const Categories: React.FC<CategoriesProps> = ({ onSelectCategory }) => {
               <h4 className="text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wide">
                 KABLI SUIT SET
               </h4>
-              <p className="text-xs text-amber-200 font-bangla mb-3">
-                সালতানাত কাবলি সেট
+              <p className="text-xs text-amber-200 mb-3">
+                Sultanate Mercerized Suit Set
               </p>
               <span className="text-[10px] font-bold text-white uppercase tracking-wider flex items-center gap-1 group-hover:text-amber-300 transition-colors">
                 <span>VIEW MORE</span>
@@ -138,8 +138,8 @@ export const Categories: React.FC<CategoriesProps> = ({ onSelectCategory }) => {
               <h4 className="text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wide">
                 WEDDING & GROOM
               </h4>
-              <p className="text-xs text-amber-200 font-bangla mb-3">
-                বর ও বিশেষ ওয়েডিং শেরওয়ানি
+              <p className="text-xs text-amber-200 mb-3">
+                Bespoke Groom Sherwani Couture
               </p>
               <span className="text-[10px] font-bold text-white uppercase tracking-wider flex items-center gap-1 group-hover:text-amber-300 transition-colors">
                 <span>VIEW MORE</span>
@@ -165,8 +165,8 @@ export const Categories: React.FC<CategoriesProps> = ({ onSelectCategory }) => {
               <h4 className="text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wide">
                 NAWABI OUD & ATTAR
               </h4>
-              <p className="text-xs text-amber-200 font-bangla mb-3">
-                শতভাগ খাঁটি অ্যালকোহল-মুক্ত আতর
+              <p className="text-xs text-amber-200 mb-3">
+                100% Pure Alcohol-Free Fragrance
               </p>
               <span className="text-[10px] font-bold text-white uppercase tracking-wider flex items-center gap-1 group-hover:text-amber-300 transition-colors">
                 <span>VIEW MORE</span>

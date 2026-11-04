@@ -32,40 +32,40 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({
   const categoryMeta: Record<string, { title: string; subtitle: string; desc: string }> = {
     silk: {
       title: 'ROYAL SILK PANJABI',
-      subtitle: 'রয়েল সিল্ক পাঞ্জাবি কালেকশন',
-      desc: '১০০% পিওর মালবেরি সিল্ক ও তসর সিল্কের সাথে মেটালিক জারি ও জারদৌসির রাজকীয় সমাহার।'
+      subtitle: 'Pure Mulberry & Tussar Silk Collection',
+      desc: '100% pure Mulberry silk and Tussar handloom weaves adorned with intricate metallic zari and handcrafted zardozi.'
     },
     katan: {
       title: 'DESIGNER KATAN PANJABI',
-      subtitle: 'বারাণসী কাতান পাঞ্জাবি কালেকশন',
-      desc: 'বারাণসী ও জামদানি জ্যাকার্ড মোটিফের ঐতিহ্যবাহী উৎসব ও ঈদ পাঞ্জাবি সম্ভার।'
+      subtitle: 'Imperial Varanasi & Jamdani Weave',
+      desc: 'Authentic Varanasi katan silk jacquard motifs designed for prestigious celebrations, weddings, and Eid festivities.'
     },
     kabli: {
       title: 'KABLI SUIT SET',
-      subtitle: 'সালতানাত কাবলি স্যুট কালেকশন',
-      desc: 'পাঞ্জাবি ও ম্যাচিং টেইলর্ড ট্রাউজার পায়জামার সম্পূর্ণ প্রিমিয়াম সেট।'
+      subtitle: 'Tailored Sultanate Jubbah & Trouser Pyjama',
+      desc: 'Complete premium two-piece sets crafted from wrinkle-resistant Super 120s Egyptian mercerized cotton.'
     },
     wedding: {
       title: 'GROOM & WEDDING SHERWANI',
-      subtitle: 'বর ও ওয়েডিং শেরওয়ানি কালেকশন',
-      desc: 'বরের বিশেষ দিনের জন্য হাতে বোনা কারুকাজ ও রাজকীয় আভিজাত্যের মাস্টারপিস পোশাক।'
+      subtitle: 'Artisanal Wedding Couture for Grooms',
+      desc: 'Handcrafted master embroidery and heirloom grandeur tailored exclusively for memorable ceremonies.'
     },
     cotton: {
       title: 'FINE COTTON & LINEN',
-      subtitle: 'লখনৌ চিকেনকারি ও ব্রিদেবল সুতি',
-      desc: '১০০% প্রাকৃতিক ব্রিদেবল তুলা ও লিনেন ফেব্রিকের চিরসবুজ আরামদায়ক পাঞ্জাবি।'
+      subtitle: 'Breathable Lucknowi Chikankari & Pure Linen',
+      desc: 'Ultra-breathable natural cotton fibers offering supreme comfort and understated timeless elegance.'
     },
     attar: {
       title: 'NAWABI OUD & PERFUMERY',
-      subtitle: 'খাঁটি নবাবী আতর ও উদ কালেকশন',
-      desc: '১০০% অ্যালকোহল-মুক্ত বন্য কম্বোডিয়ান আগরউড ও রাজকীয় হোয়াইট মাস্কের মোহময় সুবাস।'
+      subtitle: 'Artisanal Alcohol-Free Attar & Wild Agarwood',
+      desc: 'Pure Cambodian wild agarwood, royal white musk, and distilled floral notes evoking aristocratic heritage.'
     }
   };
 
   const currentMeta = categoryMeta[categoryId] || {
     title: 'NAWABIYAAT COLLECTION',
-    subtitle: 'নবাবিয়াত স্পেশাল কালেকশন',
-    desc: 'নবাবিয়াত অ্যাটেলিয়ারের এক্সক্লুসিভ হেরিটেজ সম্ভার।'
+    subtitle: 'Exclusive Atelier Signature Collection',
+    desc: 'Bespoke handloom craftsmanship and royal tailoring from the Nawabiyaat Atelier.'
   };
 
   // Filter and Sort category items
@@ -177,7 +177,7 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({
           
           {/* Size Filter Pills */}
           <div className="flex items-center gap-2 overflow-x-auto w-full sm:w-auto text-xs">
-            <span className="text-stone-400 font-semibold uppercase tracking-wider text-[11px]">সাইজ:</span>
+            <span className="text-stone-400 font-semibold uppercase tracking-wider text-[11px]">Size:</span>
             {['all', '38', '40', '42', '44'].map((size) => (
               <button
                 key={size}
@@ -221,13 +221,13 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({
       <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
         {categoryProducts.length === 0 ? (
           <div className="py-20 text-center space-y-4 max-w-md mx-auto">
-            <h3 className="text-base font-bold text-stone-800">কোনো পাঞ্জাবি পাওয়া যায়নি</h3>
-            <p className="text-xs text-stone-500">আপনার ফিল্টার পরিবর্তন করে পুনরায় চেষ্টা করুন।</p>
+            <h3 className="text-base font-bold text-stone-800">No items found</h3>
+            <p className="text-xs text-stone-500">Please adjust your filter options to see more products.</p>
             <button
               onClick={() => setSelectedSize('all')}
               className="px-6 py-2 bg-black text-white text-xs font-bold uppercase tracking-wider cursor-pointer"
             >
-              রিসেট সাইজ
+              Reset Size Filter
             </button>
           </div>
         ) : (

@@ -14,7 +14,7 @@ export const OrderSuccessModal: React.FC<OrderSuccessModalProps> = ({ order, onC
 
   const handleWhatsApp = () => {
     const text = encodeURIComponent(
-      `আসসালামু আলাইকুম নবাবিয়াত, আমি একটি নতুন অর্ডার করেছি।\nঅর্ডার আইডি: ${order.orderId}\nনাম: ${order.customer.name}\nমোট মূল্য: ৳${order.pricing.total}\nপেমেন্ট মেথড: ${order.paymentMethod.toUpperCase()}`
+      `Hello Nawabiyaat Atelier, I have placed a new order.\nOrder ID: ${order.orderId}\nName: ${order.customer.name}\nTotal: BDT ${order.pricing.total}\nPayment Method: ${order.paymentMethod.toUpperCase()}`
     );
     window.open(`https://wa.me/8801700000000?text=${text}`, '_blank');
   };
@@ -41,7 +41,7 @@ export const OrderSuccessModal: React.FC<OrderSuccessModalProps> = ({ order, onC
             THANK YOU, {order.customer.name}!
           </h2>
           <p className="text-xs text-stone-600">
-            অর্ডার আইডি: <strong className="text-black font-mono text-sm tracking-wider">{order.orderId}</strong>
+            Order ID: <strong className="text-black font-mono text-sm tracking-wider">{order.orderId}</strong>
           </p>
         </div>
 
@@ -60,13 +60,13 @@ export const OrderSuccessModal: React.FC<OrderSuccessModalProps> = ({ order, onC
               <div key={idx} className="flex justify-between items-center text-stone-800">
                 <div className="flex items-center gap-2">
                   <span className="text-stone-400 font-mono">{item.quantity}x</span>
-                  <span className="font-semibold text-stone-900">{item.nameBangla}</span>
+                  <span className="font-semibold text-stone-900">{item.nameEnglish || item.nameBangla}</span>
                   <span className="text-[10px] text-stone-500 bg-stone-200 px-1.5 py-0.2">
                     {item.size}
                   </span>
                 </div>
                 <span className="font-bold text-black font-serif">
-                  ৳{(item.price * item.quantity).toLocaleString('en-US')}
+                  BDT {(item.price * item.quantity).toLocaleString('en-US')}
                 </span>
               </div>
             ))}
@@ -76,21 +76,21 @@ export const OrderSuccessModal: React.FC<OrderSuccessModalProps> = ({ order, onC
           <div className="pt-2 border-t border-stone-200 space-y-1 text-stone-600">
             <div className="flex justify-between">
               <span>Subtotal:</span>
-              <span>৳{order.pricing.subtotal.toLocaleString('en-US')}</span>
+              <span>BDT {order.pricing.subtotal.toLocaleString('en-US')}</span>
             </div>
             {order.pricing.discount > 0 && (
               <div className="flex justify-between text-emerald-700 font-semibold">
                 <span>Discount:</span>
-                <span>-৳{order.pricing.discount.toLocaleString('en-US')}</span>
+                <span>-BDT {order.pricing.discount.toLocaleString('en-US')}</span>
               </div>
             )}
             <div className="flex justify-between">
               <span>Shipping:</span>
-              <span>{order.pricing.deliveryFee === 0 ? 'FREE' : `৳${order.pricing.deliveryFee}`}</span>
+              <span>{order.pricing.deliveryFee === 0 ? 'FREE' : `BDT ${order.pricing.deliveryFee}`}</span>
             </div>
             <div className="flex justify-between font-bold text-sm text-black pt-1 border-t border-stone-300">
               <span>Total:</span>
-              <span className="font-serif text-base">৳{order.pricing.total.toLocaleString('en-US')}</span>
+              <span className="font-serif text-base">BDT {order.pricing.total.toLocaleString('en-US')}</span>
             </div>
           </div>
         </div>
@@ -103,10 +103,10 @@ export const OrderSuccessModal: React.FC<OrderSuccessModalProps> = ({ order, onC
           </div>
           <p>{order.customer.address}</p>
           <p className="text-stone-500">
-            মোবাইল: <strong className="text-black">{order.customer.phone}</strong>
+            Mobile: <strong className="text-black">{order.customer.phone}</strong>
           </p>
           <p className="text-stone-500">
-            পেমেন্ট: <strong className="text-black uppercase">{order.paymentMethod}</strong>
+            Payment Method: <strong className="text-black uppercase">{order.paymentMethod}</strong>
           </p>
         </div>
 

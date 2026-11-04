@@ -45,23 +45,23 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
     setErrorMessage('');
 
     if (!name.trim()) {
-      setErrorMessage('অনুগ্রহ করে আপনার পুরো নাম লিখুন।');
+      setErrorMessage('Please enter your full name.');
       return;
     }
 
     const cleanPhone = phone.trim().replace(/\s+/g, '');
     if (!cleanPhone || cleanPhone.length < 11) {
-      setErrorMessage('অনুগ্রহ করে সঠিক ১১ ডিজিটের মোবাইল নম্বর দিন (যেমন: 017XXXXXXXX)');
+      setErrorMessage('Please enter a valid 11-digit mobile number (e.g. 017XXXXXXXX).');
       return;
     }
 
     if (!address.trim()) {
-      setErrorMessage('অনুগ্রহ করে আপনার বিস্তারিত ডেলিভারি ঠিকানা দিন।');
+      setErrorMessage('Please enter your detailed delivery address.');
       return;
     }
 
     if ((paymentMethod === 'bkash' || paymentMethod === 'nagad') && !paymentTrxId.trim()) {
-      setErrorMessage(`অনুগ্রহ করে ${paymentMethod === 'bkash' ? 'বিকাশ' : 'নগদ'} ট্রানজেকশন আইডি (TrxID) দিন।`);
+      setErrorMessage(`Please enter the ${paymentMethod === 'bkash' ? 'bKash' : 'Nagad'} Transaction ID (TrxID).`);
       return;
     }
 
@@ -119,7 +119,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
               <h2 className="text-lg sm:text-xl font-bold font-sans uppercase tracking-wider text-stone-900">
                 EXPRESS CHECKOUT
               </h2>
-              <p className="text-xs text-stone-500 font-bangla">সঠিক তথ্য পূরণ করে অর্ডারটি চূড়ান্ত করুন</p>
+              <p className="text-xs text-stone-500">Complete your details to finalize your order</p>
             </div>
           </div>
 
@@ -151,12 +151,12 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
 
               <div>
                 <label className="block text-xs font-semibold text-stone-700 mb-1">
-                  আপনার সম্পূর্ণ নাম <span className="text-red-500">*</span>
+                  Full Name <span className="text-red-500">*</span>
                 </label>
                 <input
                   type="text"
                   required
-                  placeholder="যেমন: তানভীর আহমেদ"
+                  placeholder="e.g. Tanvir Ahmed"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   className="w-full bg-stone-50 border border-stone-300 text-xs text-stone-900 p-2.5 focus:border-black focus:outline-none rounded-none"
@@ -166,7 +166,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
               <div className="grid grid-cols-2 gap-2">
                 <div>
                   <label className="block text-xs font-semibold text-stone-700 mb-1">
-                    মোবাইল নম্বর <span className="text-red-500">*</span>
+                    Mobile Number <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="tel"
@@ -178,7 +178,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold text-stone-700 mb-1">বিকল্প নম্বর</label>
+                  <label className="block text-xs font-semibold text-stone-700 mb-1">Alternative Phone</label>
                   <input
                     type="tel"
                     placeholder="018XXXXXXXX"
@@ -191,7 +191,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
 
               <div>
                 <label className="block text-xs font-semibold text-stone-700 mb-1">
-                  ডেলিভারি এলাকা <span className="text-red-500">*</span>
+                  Delivery Zone <span className="text-red-500">*</span>
                 </label>
                 <div className="grid grid-cols-2 gap-2">
                   <button
@@ -203,9 +203,9 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                         : 'border-stone-200 bg-white text-stone-500'
                     }`}
                   >
-                    <div>ঢাকা সিটি (Inside Dhaka)</div>
+                    <div>Inside Dhaka</div>
                     <div className="text-[10px] text-stone-500">
-                      {isFreeShipping ? 'ফ্রি ডেলিভারি' : 'চার্জ ৳৭০ (২৪-৪৮ ঘণ্টা)'}
+                      {isFreeShipping ? 'Free Delivery' : 'Charge BDT 70 (24-48 hrs)'}
                     </div>
                   </button>
 
@@ -218,9 +218,9 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                         : 'border-stone-200 bg-white text-stone-500'
                     }`}
                   >
-                    <div>ঢাকার বাইরে (All Bangladesh)</div>
+                    <div>All Bangladesh (Outside Dhaka)</div>
                     <div className="text-[10px] text-stone-500">
-                      {isFreeShipping ? 'ফ্রি ডেলিভারি' : 'চার্জ ৳১৩০ (২-৩ দিন)'}
+                      {isFreeShipping ? 'Free Delivery' : 'Charge BDT 130 (2-3 days)'}
                     </div>
                   </button>
                 </div>
@@ -228,12 +228,12 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
 
               <div>
                 <label className="block text-xs font-semibold text-stone-700 mb-1">
-                  পূর্ণ ঠিকানা (বাড়ি/রোড/এলাকা/থানা/জেলা) <span className="text-red-500">*</span>
+                  Full Address (House, Road, Area, Thana, District) <span className="text-red-500">*</span>
                 </label>
                 <textarea
                   rows={2}
                   required
-                  placeholder="বাড়ি নং, রোড নং, এলাকা এবং থানার নাম লিখুন..."
+                  placeholder="House no, Road no, Area, Thana, District..."
                   value={address}
                   onChange={(e) => setAddress(e.target.value)}
                   className="w-full bg-stone-50 border border-stone-300 text-xs text-stone-900 p-2.5 focus:border-black focus:outline-none rounded-none"
@@ -241,10 +241,10 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-stone-700 mb-1">অর্ডার নোট (ঐচ্ছিক)</label>
+                <label className="block text-xs font-semibold text-stone-700 mb-1">Order Notes (Optional)</label>
                 <input
                   type="text"
-                  placeholder="যেমন: বিকেলে ডেলিভারি দেওয়া যাবে কি?"
+                  placeholder="e.g. Please deliver in the afternoon"
                   value={notes}
                   onChange={(e) => setNotes(e.target.value)}
                   className="w-full bg-stone-50 border border-stone-300 text-xs text-stone-900 p-2 focus:border-black focus:outline-none rounded-none"
@@ -275,11 +275,11 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                   />
                   <div>
                     <div className="text-xs font-bold text-black flex items-center gap-1.5">
-                      <span>ক্যাশ অন ডেলিভারি (Cash on Delivery)</span>
+                      <span>Cash on Delivery (COD)</span>
                       <span className="text-[9px] bg-emerald-100 text-emerald-800 px-1 py-0.2 font-bold">POPULAR</span>
                     </div>
                     <p className="text-[11px] text-stone-500 mt-0.5">
-                      পণ্য হাতে পেয়ে দেখে মূল্য পরিশোধ করুন।
+                      Inspect your garment upon arrival and pay cash directly to the courier.
                     </p>
                   </div>
                 </label>
@@ -298,9 +298,9 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                     className="mt-0.5 text-black"
                   />
                   <div className="flex-1">
-                    <div className="text-xs font-bold text-pink-600">বিকাশ (bKash Instant)</div>
+                    <div className="text-xs font-bold text-pink-600">bKash Instant Transfer</div>
                     <p className="text-[11px] text-stone-500 mt-0.5">
-                      আমাদের পার্সোনাল নম্বরে পেমেন্ট বা সেন্ড মানি করুন।
+                      Send payment or transfer money to our verified personal account.
                     </p>
                   </div>
                 </label>
@@ -319,9 +319,9 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                     className="mt-0.5 text-black"
                   />
                   <div className="flex-1">
-                    <div className="text-xs font-bold text-orange-600">নগদ (Nagad Instant)</div>
+                    <div className="text-xs font-bold text-orange-600">Nagad Instant Transfer</div>
                     <p className="text-[11px] text-stone-500 mt-0.5">
-                      নগদ একাউন্ট থেকে দ্রুত ও সহজে সরাসরি পেমেন্ট করুন।
+                      Quick and seamless direct payment from your Nagad digital wallet.
                     </p>
                   </div>
                 </label>
@@ -331,17 +331,17 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
               {(paymentMethod === 'bkash' || paymentMethod === 'nagad') && (
                 <div className="p-3 bg-stone-100 border border-stone-300 space-y-2">
                   <div className="text-xs text-stone-800">
-                    আমাদের {paymentMethod === 'bkash' ? 'বিকাশ' : 'নগদ'} নম্বর:{' '}
+                    Our {paymentMethod === 'bkash' ? 'bKash' : 'Nagad'} Number:{' '}
                     <strong className="text-black font-mono">01700-000000</strong> (Personal/Send Money)
                   </div>
                   <div>
                     <label className="block text-[11px] font-semibold text-stone-700 mb-1">
-                      ট্রানজেকশন আইডি (TrxID) দিন <span className="text-red-500">*</span>
+                      Enter Transaction ID (TrxID) <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="text"
                       required
-                      placeholder="যেমন: 9J4K2L8M7"
+                      placeholder="e.g. 9J4K2L8M7"
                       value={paymentTrxId}
                       onChange={(e) => setPaymentTrxId(e.target.value)}
                       className="w-full bg-white border border-stone-300 text-xs text-black p-2 focus:border-black uppercase font-semibold rounded-none"
@@ -358,13 +358,13 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
 
                 <div className="flex justify-between text-stone-600">
                   <span>Subtotal ({cart.reduce((a, b) => a + b.quantity, 0)} items):</span>
-                  <span className="font-semibold text-black">৳{subtotal.toLocaleString('en-US')}</span>
+                  <span className="font-semibold text-black">BDT {subtotal.toLocaleString('en-US')}</span>
                 </div>
 
                 {couponDiscount > 0 && (
                   <div className="flex justify-between text-emerald-700">
                     <span>Discount ({couponCode}):</span>
-                    <span>-৳{couponDiscount.toLocaleString('en-US')}</span>
+                    <span>-BDT {couponDiscount.toLocaleString('en-US')}</span>
                   </div>
                 )}
 
@@ -372,16 +372,16 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                   <span>Delivery ({city === 'dhaka' ? 'Inside Dhaka' : 'Outside Dhaka'}):</span>
                   <span>
                     {deliveryFee === 0 ? (
-                      <span className="text-emerald-700 font-bold">FREE (Over ৳৩,০০০)</span>
+                      <span className="text-emerald-700 font-bold">FREE (Over BDT 3,000)</span>
                     ) : (
-                      `৳${deliveryFee}`
+                      `BDT ${deliveryFee}`
                     )}
                   </span>
                 </div>
 
                 <div className="flex justify-between text-base font-bold text-black pt-2 border-t border-stone-300">
                   <span>Total Payable:</span>
-                  <span className="font-serif text-lg">৳{grandTotal.toLocaleString('en-US')}</span>
+                  <span className="font-serif text-lg">BDT {grandTotal.toLocaleString('en-US')}</span>
                 </div>
               </div>
 
@@ -395,7 +395,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                   <span>PROCESSING ORDER...</span>
                 ) : (
                   <>
-                    <span>CONFIRM ORDER (৳{grandTotal.toLocaleString('en-US')})</span>
+                    <span>CONFIRM ORDER (BDT {grandTotal.toLocaleString('en-US')})</span>
                     <ArrowRight className="w-4 h-4" />
                   </>
                 )}

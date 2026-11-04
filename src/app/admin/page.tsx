@@ -61,24 +61,24 @@ export default function AdminDashboard() {
   const [formOriginalPrice, setFormOriginalPrice] = useState<number>(5500);
   const [formImage, setFormImage] = useState('/assets/images/panjabi.jpg');
   const [formBadge, setFormBadge] = useState('NEW DROP');
-  const [formFabric, setFormFabric] = useState('১০০% খাঁটি মালবেরি সিল্ক');
+  const [formFabric, setFormFabric] = useState('100% Pure Mulberry Silk');
   const [formDescription, setFormDescription] = useState('');
   const [formInStock, setFormInStock] = useState(true);
   const [formSizes, setFormSizes] = useState<string[]>(['M (38)', 'L (40)', 'XL (42)', 'XXL (44)']);
 
   // Site Settings Form
-  const [topNotice, setTopNotice] = useState('✨ নবাবিয়াত ঈদ ও ওয়েডিং কালেকশন ২০২৬ • সারা বাংলাদেশে ৩ দিনে ক্যাশ অন ডেলিভারি • ৳৩,০০০+ অর্ডারে ফ্রি শিপিং');
+  const [topNotice, setTopNotice] = useState('EID & WEDDING COLLECTION 2026 • 3-DAY EXPRESS DELIVERY NATIONWIDE • FREE SHIPPING OVER BDT 3,000');
   const [hotline, setHotline] = useState('+880 1700-000000');
   const [freeShippingThreshold, setFreeShippingThreshold] = useState(3000);
 
   // Preset image gallery for quick selection
   const imagePresets = [
-    { label: 'রয়্যাল সিল্ক (Panjabi)', url: '/assets/images/panjabi.jpg' },
-    { label: 'সালতানাত কাবলি (Jubbah/Kabli)', url: '/assets/images/jubbah.jpg' },
-    { label: 'বারাণসী কাতান (Katan Weave)', url: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80' },
-    { label: 'ওয়েডিং শেরওয়ানি (Groom Wedding)', url: 'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=800&q=80' },
-    { label: 'ব্ল্যাক গ্লস রেশম (Black Silk)', url: 'https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?auto=format&fit=crop&w=800&q=80' },
-    { label: 'নবাবী আতর ও উদ (Oud & Attar)', url: 'https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&w=800&q=80' }
+    { label: 'Royal Silk (Panjabi)', url: '/assets/images/panjabi.jpg' },
+    { label: 'Sultanate Kabli (Jubbah/Kabli)', url: '/assets/images/jubbah.jpg' },
+    { label: 'Varanasi Katan (Katan Weave)', url: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80' },
+    { label: 'Wedding Sherwani (Groom Wedding)', url: 'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=800&q=80' },
+    { label: 'Black Gloss Silk (Black Silk)', url: 'https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?auto=format&fit=crop&w=800&q=80' },
+    { label: 'Nawabi Oud & Attar (Oud & Attar)', url: 'https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&w=800&q=80' }
   ];
 
   const standardSizesList = ['M (38)', 'L (40)', 'XL (42)', 'XXL (44)', '3XL (46)'];
@@ -117,8 +117,8 @@ export default function AdminDashboard() {
     setFormOriginalPrice(5800);
     setFormImage('/assets/images/panjabi.jpg');
     setFormBadge('NEW ARRIVAL');
-    setFormFabric('১০০% খাঁটি মালবেরি সিল্ক ও সূক্ষ্ম জারি কাজ');
-    setFormDescription('নবাবিয়াত রাজকীয় কালেকশন। কলার ও প্লেকেটে নিখুঁত কাজ এবং আরামদায়ক মাস্টার ফিটিং।');
+    setFormFabric('100% Pure Mulberry Silk & Delicate Zari Work');
+    setFormDescription('Nawabiyaat Royal Collection. Intricate collar & placket handwork with comfortable master bespoke fit.');
     setFormInStock(true);
     setFormSizes(['M (38)', 'L (40)', 'XL (42)', 'XXL (44)']);
     setIsModalOpen(true);
@@ -135,7 +135,7 @@ export default function AdminDashboard() {
     setFormOriginalPrice(p.originalPrice || Math.round(p.price * 1.15));
     setFormImage(p.image);
     setFormBadge(p.badge || 'EXCLUSIVE');
-    setFormFabric(p.fabric || '১০০% পিওর ফেব্রিক');
+    setFormFabric(p.fabric || '100% Pure Fabric');
     setFormDescription(p.description || '');
     setFormInStock(p.inStock);
     setFormSizes(p.sizes || ['M (38)', 'L (40)', 'XL (42)']);
@@ -147,7 +147,7 @@ export default function AdminDashboard() {
     e.preventDefault();
 
     if (!formNameBangla || !formNameEnglish) {
-      showToast('অনুগ্রহ করে পণ্যের বাংলা ও ইংরেজি নাম দিন', 'error');
+      showToast('Please enter product name in both fields', 'error');
       return;
     }
 
@@ -180,10 +180,10 @@ export default function AdminDashboard() {
     let updatedList: Product[];
     if (editingProduct) {
       updatedList = products.map((p) => (p.id === editingProduct.id ? newProduct : p));
-      showToast(`'${newProduct.nameBangla}' সফলভাবে আপডেট করা হয়েছে!`);
+      showToast(`'${newProduct.nameEnglish || newProduct.nameBangla}' successfully updated!`);
     } else {
       updatedList = [newProduct, ...products];
-      showToast(`নতুন প্রোডাক্ট '${newProduct.nameBangla}' যুক্ত হয়েছে!`);
+      showToast(`New product '${newProduct.nameEnglish || newProduct.nameBangla}' added!`);
     }
 
     setProducts(updatedList);
@@ -193,11 +193,11 @@ export default function AdminDashboard() {
 
   // Delete Product
   const handleDeleteProduct = (productId: string, productName: string) => {
-    if (confirm(`আপনি কি নিশ্চিত যে '${productName}' প্রোডাক্টটি মুছে ফেলতে চান?`)) {
+    if (confirm(`Are you sure you want to delete '${productName}'?`)) {
       const updated = products.filter((p) => p.id !== productId);
       setProducts(updated);
       saveStoredProducts(updated);
-      showToast(`'${productName}' প্রোডাক্টটি ডিলিট করা হয়েছে।`);
+      showToast(`'${productName}' deleted.`);
     }
   };
 
@@ -211,7 +211,7 @@ export default function AdminDashboard() {
     });
     setProducts(updated);
     saveStoredProducts(updated);
-    showToast('স্টক স্ট্যাটাস আপডেট করা হয়েছে');
+    showToast('Stock status updated');
   };
 
   // Handle Local Image Upload (FileReader -> Base64)
@@ -222,7 +222,7 @@ export default function AdminDashboard() {
       reader.onloadend = () => {
         if (typeof reader.result === 'string') {
           setFormImage(reader.result);
-          showToast('ছবি সফলভাবে আপলোড হয়েছে!');
+          showToast('Image uploaded successfully!');
         }
       };
       reader.readAsDataURL(file);
@@ -231,10 +231,10 @@ export default function AdminDashboard() {
 
   // Reset to Default Products
   const handleResetDefaults = () => {
-    if (confirm('আপনি কি ফ্যাক্টরি ডিফল্ট ১২টি প্রোডাক্ট ফিরিয়ে আনতে চান? এর ফলে আপনার যুক্ত করা কাস্টম প্রোডাক্ট রিসেট হবে।')) {
+    if (confirm('Are you sure you want to restore factory default products? This will reset custom items.')) {
       const defs = resetStoredProducts();
       setProducts(defs);
-      showToast('ডিফল্ট প্রোডাক্ট ডাটা রিস্টোর করা হয়েছে!');
+      showToast('Default product data restored!');
     }
   };
 
@@ -248,7 +248,7 @@ export default function AdminDashboard() {
     });
     setOrders(updated);
     saveStoredOrders(updated);
-    showToast(`অর্ডার ${orderId} স্ট্যাটাস পরিবর্তন হয়েছে: ${newStatus}`);
+    showToast(`Order ${orderId} status changed to: ${newStatus}`);
   };
 
   // Filtered Products
@@ -285,8 +285,8 @@ export default function AdminDashboard() {
                 ADMIN PORTAL
               </span>
             </div>
-            <span className="text-[10px] text-stone-400 font-bangla block mt-0.5">
-              নবাবিয়াত সেন্ট্রাল ম্যানেজমেন্ট ও প্রোডাক্ট কন্ট্রোল প্যানেল
+            <span className="text-[10px] text-stone-400 block mt-0.5">
+              Nawabiyaat Central Management & Product Control Portal
             </span>
           </div>
         </div>
@@ -298,7 +298,7 @@ export default function AdminDashboard() {
             target="_blank"
             className="px-4 py-2 rounded-lg bg-stone-900 hover:bg-stone-800 border border-stone-700 text-stone-200 hover:text-white text-xs font-bold transition-all flex items-center gap-1.5 shadow-sm"
           >
-            <span>ওয়েবসাইট দেখুন</span>
+            <span>View Website</span>
             <ExternalLink className="w-3.5 h-3.5 text-amber-400" />
           </Link>
 
@@ -307,7 +307,7 @@ export default function AdminDashboard() {
             className="px-4 sm:px-5 py-2 rounded-lg bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 hover:brightness-110 text-black font-extrabold text-xs uppercase tracking-wider transition-all shadow-md shadow-amber-400/20 flex items-center gap-1.5 cursor-pointer"
           >
             <Plus className="w-4 h-4" />
-            <span>নতুন প্রোডাক্ট যোগ করুন</span>
+            <span>Add New Product</span>
           </button>
         </div>
 
@@ -332,38 +332,38 @@ export default function AdminDashboard() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
           <div className="bg-[#10121a] border border-stone-800 p-5 rounded-xl space-y-1">
             <div className="flex items-center justify-between text-stone-400 text-xs uppercase font-bold">
-              <span>মোট প্রোডাক্ট</span>
+              <span>Total Products</span>
               <Package className="w-4 h-4 text-amber-400" />
             </div>
-            <p className="text-2xl sm:text-3xl font-serif font-black text-white">{products.length} টি</p>
-            <span className="text-[11px] text-stone-400 font-bangla">সব ক্যাটাগরি মিলিয়ে</span>
+            <p className="text-2xl sm:text-3xl font-serif font-black text-white">{products.length} Items</p>
+            <span className="text-[11px] text-stone-400">Across all categories</span>
           </div>
 
           <div className="bg-[#10121a] border border-stone-800 p-5 rounded-xl space-y-1">
             <div className="flex items-center justify-between text-stone-400 text-xs uppercase font-bold">
-              <span>ইন স্টক প্রস্তুত</span>
+              <span>In Stock Ready</span>
               <Check className="w-4 h-4 text-emerald-400" />
             </div>
-            <p className="text-2xl sm:text-3xl font-serif font-black text-emerald-400">{totalStockCount} টি</p>
-            <span className="text-[11px] text-stone-400 font-bangla">গ্রাহক সরাসরি অর্ডার করতে পারবে</span>
+            <p className="text-2xl sm:text-3xl font-serif font-black text-emerald-400">{totalStockCount} Items</p>
+            <span className="text-[11px] text-stone-400">Available for customer orders</span>
           </div>
 
           <div className="bg-[#10121a] border border-stone-800 p-5 rounded-xl space-y-1">
             <div className="flex items-center justify-between text-stone-400 text-xs uppercase font-bold">
-              <span>কাস্টমার অর্ডার</span>
+              <span>Customer Orders</span>
               <ShoppingBag className="w-4 h-4 text-blue-400" />
             </div>
-            <p className="text-2xl sm:text-3xl font-serif font-black text-blue-400">{orders.length} টি</p>
-            <span className="text-[11px] text-stone-400 font-bangla">লাইভ প্লেস করা অর্ডার</span>
+            <p className="text-2xl sm:text-3xl font-serif font-black text-blue-400">{orders.length} Orders</p>
+            <span className="text-[11px] text-stone-400">Live placed orders</span>
           </div>
 
           <div className="bg-[#10121a] border border-stone-800 p-5 rounded-xl space-y-1">
             <div className="flex items-center justify-between text-stone-400 text-xs uppercase font-bold">
-              <span>ক্যাটালগ মূল্য</span>
+              <span>Catalog Value</span>
               <DollarSign className="w-4 h-4 text-amber-400" />
             </div>
-            <p className="text-2xl sm:text-3xl font-serif font-black text-amber-300">৳{totalValue.toLocaleString()}</p>
-            <span className="text-[11px] text-stone-400 font-bangla">গড় মূল্য: ৳{Math.round(totalValue / (products.length || 1)).toLocaleString()}</span>
+            <p className="text-2xl sm:text-3xl font-serif font-black text-amber-300">BDT {totalValue.toLocaleString()}</p>
+            <span className="text-[11px] text-stone-400">Avg Value: BDT {Math.round(totalValue / (products.length || 1)).toLocaleString()}</span>
           </div>
         </div>
 
@@ -378,7 +378,7 @@ export default function AdminDashboard() {
             }`}
           >
             <Layers className="w-4 h-4" />
-            <span>প্রোডাক্ট ইনভেন্টরি ({products.length})</span>
+            <span>Product Inventory ({products.length})</span>
           </button>
 
           <button
@@ -390,7 +390,7 @@ export default function AdminDashboard() {
             }`}
           >
             <ShoppingBag className="w-4 h-4" />
-            <span>গ্রাহক অর্ডারসমূহ ({orders.length})</span>
+            <span>Customer Orders ({orders.length})</span>
           </button>
 
           <button
@@ -402,7 +402,7 @@ export default function AdminDashboard() {
             }`}
           >
             <Sparkles className="w-4 h-4" />
-            <span>ওয়েবসাইট ব্যানার ও সেটিংস</span>
+            <span>Website Banners & Settings</span>
           </button>
         </div>
 
@@ -420,7 +420,7 @@ export default function AdminDashboard() {
                 <Search className="w-4 h-4 text-stone-400 absolute left-3.5 top-3 pointer-events-none" />
                 <input
                   type="text"
-                  placeholder="প্রোডাক্টের নাম বা আইডি দিয়ে খুঁজুন..."
+                  placeholder="Search by product name, ID or fabric..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full bg-[#08090d] border border-stone-700 text-xs px-3.5 py-2.5 pl-10 text-white placeholder-stone-500 rounded-lg outline-none focus:border-amber-400"
@@ -431,16 +431,16 @@ export default function AdminDashboard() {
               <div className="flex flex-wrap items-center gap-2 w-full md:w-auto">
                 <span className="text-xs text-stone-400 font-semibold uppercase flex items-center gap-1">
                   <Filter className="w-3.5 h-3.5 text-amber-400" />
-                  <span>ফিল্টার:</span>
+                  <span>Filter:</span>
                 </span>
                 {[
-                  { id: 'all', label: 'সবগুলো' },
-                  { id: 'silk', label: 'রয়্যাল সিল্ক' },
-                  { id: 'katan', label: 'কাতান' },
-                  { id: 'kabli', label: 'কাবলি সেট' },
-                  { id: 'wedding', label: 'ওয়েডিং' },
-                  { id: 'cotton', label: 'সুতি' },
-                  { id: 'attar', label: 'আতর' }
+                  { id: 'all', label: 'All' },
+                  { id: 'silk', label: 'Royal Silk' },
+                  { id: 'katan', label: 'Katan' },
+                  { id: 'kabli', label: 'Kabli Set' },
+                  { id: 'wedding', label: 'Wedding' },
+                  { id: 'cotton', label: 'Cotton' },
+                  { id: 'attar', label: 'Attar' }
                 ].map((cat) => (
                   <button
                     key={cat.id}
@@ -458,10 +458,10 @@ export default function AdminDashboard() {
                 <button
                   onClick={handleResetDefaults}
                   className="ml-auto px-3 py-1.5 rounded-md bg-stone-900 hover:bg-stone-800 border border-stone-700 text-stone-400 hover:text-white text-[11px] font-bold flex items-center gap-1 cursor-pointer"
-                  title="রিসেট ডিফল্ট প্রোডাক্ট"
+                  title="Reset to default products"
                 >
                   <RefreshCw className="w-3 h-3 text-amber-400" />
-                  <span>রিসেট ডাটা</span>
+                  <span>Reset Data</span>
                 </button>
               </div>
 
@@ -473,21 +473,21 @@ export default function AdminDashboard() {
                 <table className="w-full text-left border-collapse text-xs">
                   <thead>
                     <tr className="bg-[#141722] border-b border-stone-800 text-stone-400 uppercase tracking-wider font-bold">
-                      <th className="py-4 px-4">ছবি</th>
-                      <th className="py-4 px-4">আইডি ও নাম</th>
-                      <th className="py-4 px-4">ক্যাটাগরি</th>
-                      <th className="py-4 px-4">মূল্য (BDT)</th>
-                      <th className="py-4 px-4">ফেব্রিক / উপাদান</th>
-                      <th className="py-4 px-4">সাইজ</th>
-                      <th className="py-4 px-4">স্টক স্ট্যাটাস</th>
-                      <th className="py-4 px-4 text-right">অ্যাকশন</th>
+                      <th className="py-4 px-4">Image</th>
+                      <th className="py-4 px-4">ID & Name</th>
+                      <th className="py-4 px-4">Category</th>
+                      <th className="py-4 px-4">Price (BDT)</th>
+                      <th className="py-4 px-4">Fabric / Material</th>
+                      <th className="py-4 px-4">Sizes</th>
+                      <th className="py-4 px-4">Stock Status</th>
+                      <th className="py-4 px-4 text-right">Actions</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-stone-800/60">
                     {filteredProducts.length === 0 ? (
                       <tr>
-                        <td colSpan={8} className="py-12 text-center text-stone-500 font-bangla text-sm">
-                          কোনো প্রোডাক্ট পাওয়া যায়নি। "নতুন প্রোডাক্ট যোগ করুন" বাটনে ক্লিক করে নতুন প্রোডাক্ট যোগ করতে পারেন।
+                        <td colSpan={8} className="py-12 text-center text-stone-500 text-sm">
+                          No products found. Click "Add New Product" to create a new item.
                         </td>
                       </tr>
                     ) : (
@@ -499,7 +499,7 @@ export default function AdminDashboard() {
                             <div className="w-14 h-16 rounded-lg bg-stone-900 border border-stone-700 overflow-hidden relative shadow-sm">
                               <img
                                 src={p.image}
-                                alt={p.nameBangla}
+                                alt={p.nameEnglish || p.nameBangla}
                                 className="w-full h-full object-cover object-top"
                               />
                             </div>
@@ -510,11 +510,11 @@ export default function AdminDashboard() {
                             <span className="text-[10px] font-mono text-amber-400 block font-semibold">
                               #{p.id}
                             </span>
-                            <span className="font-bold text-white text-sm block truncate font-bangla">
-                              {p.nameBangla}
+                            <span className="font-bold text-white text-sm block truncate">
+                              {p.nameEnglish || p.nameBangla}
                             </span>
                             <span className="text-[11px] text-stone-400 block truncate">
-                              {p.nameEnglish}
+                              {p.nameBangla}
                             </span>
                             {p.badge && (
                               <span className="inline-block mt-1 px-2 py-0.5 rounded text-[9px] font-extrabold uppercase bg-stone-800 border border-stone-700 text-amber-300">
@@ -533,28 +533,28 @@ export default function AdminDashboard() {
                               p.category === 'cotton' ? 'bg-emerald-500/15 text-emerald-300 border border-emerald-500/30' :
                               'bg-orange-500/15 text-orange-300 border border-orange-500/30'
                             }`}>
-                              {p.category === 'silk' ? '👑 রয়্যাল সিল্ক' :
-                               p.category === 'katan' ? '✨ কাতান' :
-                               p.category === 'kabli' ? '👔 কাবলি সেট' :
-                               p.category === 'wedding' ? '💍 বর ওয়েডিং' :
-                               p.category === 'cotton' ? '🌿 সুতি' : '🌸 আতর'}
+                              {p.category === 'silk' ? '👑 Royal Silk' :
+                               p.category === 'katan' ? '✨ Katan' :
+                               p.category === 'kabli' ? '👔 Kabli Set' :
+                               p.category === 'wedding' ? '💍 Wedding' :
+                               p.category === 'cotton' ? '🌿 Cotton' : '🌸 Attar'}
                             </span>
                           </td>
 
                           {/* Price */}
                           <td className="py-3 px-4 whitespace-nowrap">
                             <div className="font-serif font-bold text-sm text-amber-300">
-                              ৳{p.price.toLocaleString()}
+                              BDT {p.price.toLocaleString()}
                             </div>
                             {p.originalPrice && (
                               <div className="text-[10px] text-stone-500 line-through">
-                                ৳{p.originalPrice.toLocaleString()}
+                                BDT {p.originalPrice.toLocaleString()}
                               </div>
                             )}
                           </td>
 
                           {/* Fabric */}
-                          <td className="py-3 px-4 max-w-xs truncate text-stone-300 font-bangla text-[11px]">
+                          <td className="py-3 px-4 max-w-xs truncate text-stone-300 text-[11px]">
                             {p.fabric}
                           </td>
 
@@ -581,10 +581,10 @@ export default function AdminDashboard() {
                                   ? 'bg-emerald-500/15 text-emerald-300 border border-emerald-500/30'
                                   : 'bg-red-500/15 text-red-300 border border-red-500/30'
                               }`}
-                              title="ক্লিক করে স্টক স্ট্যাটাস পরিবর্তন করুন"
+                              title="Click to toggle stock status"
                             >
                               <span className={`w-1.5 h-1.5 rounded-full ${p.inStock ? 'bg-emerald-400' : 'bg-red-400'}`} />
-                              <span>{p.inStock ? 'ইন স্টক' : 'স্টক শেষ'}</span>
+                              <span>{p.inStock ? 'In Stock' : 'Out of Stock'}</span>
                             </button>
                           </td>
 
@@ -594,15 +594,15 @@ export default function AdminDashboard() {
                               <button
                                 onClick={() => handleOpenEditModal(p)}
                                 className="p-2 rounded-lg bg-stone-900 hover:bg-amber-400 hover:text-black border border-stone-700 text-stone-300 transition-colors cursor-pointer"
-                                title="এডিট করুন"
+                                title="Edit"
                               >
                                 <Edit3 className="w-3.5 h-3.5" />
                               </button>
 
                               <button
-                                onClick={() => handleDeleteProduct(p.id, p.nameBangla)}
+                                onClick={() => handleDeleteProduct(p.id, p.nameEnglish || p.nameBangla)}
                                 className="p-2 rounded-lg bg-stone-900 hover:bg-red-600 hover:text-white border border-stone-700 text-stone-400 transition-colors cursor-pointer"
-                                title="মুছে ফেলুন"
+                                title="Delete"
                               >
                                 <Trash2 className="w-3.5 h-3.5" />
                               </button>
@@ -627,15 +627,15 @@ export default function AdminDashboard() {
           <div className="space-y-6">
             <div className="flex items-center justify-between pb-2">
               <h3 className="text-xl font-bold font-serif text-white">
-                গ্রাহকদের সাম্প্রতিক অর্ডারসমূহ (Recent Customer Orders)
+                Recent Customer Orders
               </h3>
-              <span className="text-xs text-stone-400">সর্বমোট: {orders.length} টি অর্ডার</span>
+              <span className="text-xs text-stone-400">Total: {orders.length} orders</span>
             </div>
 
             <div className="grid grid-cols-1 gap-4">
               {orders.length === 0 ? (
-                <div className="p-12 text-center bg-[#10121a] border border-stone-800 rounded-xl text-stone-500 font-bangla">
-                  এখনো কোনো নতুন অর্ডার আসেনি। মূল সাইটের চেকআউট থেকে গ্রাহক অর্ডার করলেই এখানে দৃশ্যমান হবে।
+                <div className="p-12 text-center bg-[#10121a] border border-stone-800 rounded-xl text-stone-500">
+                  No orders placed yet. Orders from the live checkout will appear here in real-time.
                 </div>
               ) : (
                 orders.map((order) => (
@@ -649,23 +649,23 @@ export default function AdminDashboard() {
                           <span className="text-xs text-stone-400">• {order.date}</span>
                         </div>
                         <span className="text-xs text-stone-300 font-bold block mt-0.5">
-                          গ্রাহক: {order.customer.name} | ফোন: {order.customer.phone}
+                          Customer: {order.customer.name} | Phone: {order.customer.phone}
                         </span>
                       </div>
 
                       <div className="flex items-center gap-3">
-                        <span className="text-xs text-stone-400">স্ট্যাটাস:</span>
+                        <span className="text-xs text-stone-400">Status:</span>
                         <select
                           value={order.status}
                           onChange={(e) => handleUpdateOrderStatus(order.orderId, e.target.value as CustomerOrder['status'])}
                           className="bg-[#090a0d] border border-stone-700 text-xs px-3 py-1.5 rounded-lg text-amber-300 font-bold outline-none cursor-pointer"
                         >
-                          <option value="Pending">Pending (অপেক্ষমান)</option>
-                          <option value="Confirmed">Confirmed (নিশ্চিত)</option>
-                          <option value="Processing">Processing (প্রক্রিয়াধীন)</option>
-                          <option value="Shipped">Shipped (ডেলিভারিতে পাঠানো)</option>
-                          <option value="Delivered">Delivered (পৌঁছে গেছে)</option>
-                          <option value="Cancelled">Cancelled (বাতিল)</option>
+                          <option value="Pending">Pending</option>
+                          <option value="Confirmed">Confirmed</option>
+                          <option value="Processing">Processing</option>
+                          <option value="Shipped">Shipped</option>
+                          <option value="Delivered">Delivered</option>
+                          <option value="Cancelled">Cancelled</option>
                         </select>
                       </div>
                     </div>
@@ -676,13 +676,13 @@ export default function AdminDashboard() {
                       {/* Customer Address */}
                       <div className="space-y-1 bg-[#0b0d13] p-3.5 rounded-lg border border-stone-800/80">
                         <span className="text-[10px] text-stone-400 font-bold uppercase tracking-wider block">
-                          ডেলিভারি ঠিকানা
+                          Delivery Address
                         </span>
-                        <p className="text-stone-200 font-bangla">{order.customer.address}</p>
-                        <p className="text-stone-400">শহর: {order.customer.city === 'dhaka' ? 'ঢাকার ভিতরে' : 'ঢাকার বাইরে'}</p>
+                        <p className="text-stone-200">{order.customer.address}</p>
+                        <p className="text-stone-400">Zone: {order.customer.city === 'dhaka' ? 'Inside Dhaka' : 'Outside Dhaka'}</p>
                         {order.customer.notes && (
-                          <p className="text-amber-300 text-[11px] font-bangla pt-1">
-                            নোট: {order.customer.notes}
+                          <p className="text-amber-300 text-[11px] pt-1">
+                            Notes: {order.customer.notes}
                           </p>
                         )}
                       </div>
@@ -690,13 +690,13 @@ export default function AdminDashboard() {
                       {/* Items Ordered */}
                       <div className="space-y-2 bg-[#0b0d13] p-3.5 rounded-lg border border-stone-800/80">
                         <span className="text-[10px] text-stone-400 font-bold uppercase tracking-wider block">
-                          অর্ডারকৃত আইটেম
+                          Ordered Items
                         </span>
                         <div className="space-y-1.5 max-h-32 overflow-y-auto">
                           {order.items.map((item, idx) => (
                             <div key={idx} className="flex items-center justify-between gap-2 border-b border-stone-800/40 pb-1">
-                              <span className="font-bangla text-stone-200 truncate">{item.nameBangla} ({item.size})</span>
-                              <span className="font-mono text-stone-400 shrink-0">x{item.quantity} = ৳{(item.price * item.quantity).toLocaleString()}</span>
+                              <span className="text-stone-200 truncate">{item.nameEnglish || item.nameBangla} ({item.size})</span>
+                              <span className="font-mono text-stone-400 shrink-0">x{item.quantity} = BDT {(item.price * item.quantity).toLocaleString()}</span>
                             </div>
                           ))}
                         </div>
@@ -705,11 +705,11 @@ export default function AdminDashboard() {
                       {/* Payment Summary */}
                       <div className="space-y-1 bg-[#0b0d13] p-3.5 rounded-lg border border-stone-800/80">
                         <span className="text-[10px] text-stone-400 font-bold uppercase tracking-wider block">
-                          পেমেন্ট ও হিসাব
+                          Payment & Total
                         </span>
                         <div className="flex justify-between text-stone-300">
-                          <span>পদ্ধতি:</span>
-                          <span className="font-bold text-amber-300">{order.paymentMethod}</span>
+                          <span>Method:</span>
+                          <span className="font-bold text-amber-300 uppercase">{order.paymentMethod}</span>
                         </div>
                         {order.paymentTrxId && (
                           <div className="flex justify-between text-stone-300">
@@ -718,8 +718,8 @@ export default function AdminDashboard() {
                           </div>
                         )}
                         <div className="flex justify-between text-stone-300 pt-1 border-t border-stone-800">
-                          <span className="font-bold text-white">সর্বমোট মূল্য:</span>
-                          <span className="font-serif font-black text-amber-400 text-sm">৳{order.pricing.total.toLocaleString()}</span>
+                          <span className="font-bold text-white">Grand Total:</span>
+                          <span className="font-serif font-black text-amber-400 text-sm">BDT {order.pricing.total.toLocaleString()}</span>
                         </div>
                       </div>
 
@@ -739,13 +739,13 @@ export default function AdminDashboard() {
         {activeTab === 'settings' && (
           <div className="max-w-3xl bg-[#10121a] border border-stone-800 p-8 rounded-xl space-y-6">
             <h3 className="text-xl font-bold font-serif text-white">
-              ওয়েবসাইট গ্লোবাল সেটিংস (Site Settings)
+              Website Global Settings
             </h3>
 
             <div className="space-y-4 text-xs">
               <div>
-                <label className="block text-stone-300 font-bold mb-1.5 font-bangla">
-                  টপ অ্যানাউন্সমেন্ট বার মেসেজ:
+                <label className="block text-stone-300 font-bold mb-1.5">
+                  Top Announcement Strip Message:
                 </label>
                 <input
                   type="text"
@@ -758,7 +758,7 @@ export default function AdminDashboard() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-stone-300 font-bold mb-1.5">
-                    অফিসিয়াল হটলাইন নাম্বার:
+                    Official Hotline Number:
                   </label>
                   <input
                     type="text"
@@ -770,7 +770,7 @@ export default function AdminDashboard() {
 
                 <div>
                   <label className="block text-stone-300 font-bold mb-1.5">
-                    ফ্রি শিপিং ন্যূনতম লিমিট (টাকা):
+                    Free Shipping Threshold (BDT):
                   </label>
                   <input
                     type="number"
@@ -784,11 +784,11 @@ export default function AdminDashboard() {
               <div className="pt-4">
                 <button
                   type="button"
-                  onClick={() => showToast('সেটিংস সফলভাবে সংরক্ষিত হয়েছে!')}
+                  onClick={() => showToast('Settings saved successfully!')}
                   className="px-6 py-3 bg-amber-400 text-black font-extrabold text-xs uppercase tracking-wider rounded-lg hover:bg-amber-300 transition-colors cursor-pointer flex items-center gap-2"
                 >
                   <Save className="w-4 h-4" />
-                  <span>সেটিংস সেভ করুন</span>
+                  <span>Save Settings</span>
                 </button>
               </div>
             </div>
@@ -813,10 +813,10 @@ export default function AdminDashboard() {
                 </div>
                 <div>
                   <h3 className="font-serif font-bold text-base sm:text-lg text-white">
-                    {editingProduct ? 'প্রোডাক্ট এডিট করুন (Edit Product)' : 'নতুন প্রোডাক্ট যুক্ত করুন (Add New Product)'}
+                    {editingProduct ? 'Edit Product' : 'Add New Product'}
                   </h3>
-                  <p className="text-[11px] text-stone-400 font-bangla">
-                    যেকোনো ক্যাটাগরি, মূল্য, ছবি ও বিবরণ পূরণ করে সেভ করুন
+                  <p className="text-[11px] text-stone-400">
+                    Configure category, pricing, imagery, and specifications
                   </p>
                 </div>
               </div>
@@ -836,31 +836,31 @@ export default function AdminDashboard() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-stone-300 font-bold mb-1.5">
-                    ক্যাটাগরি নির্বাচন করুন (Category) *
+                    Select Category *
                   </label>
                   <select
                     value={formCategory}
                     onChange={(e) => setFormCategory(e.target.value as Product['category'])}
                     className="w-full bg-[#151824] border border-stone-700 text-xs px-3.5 py-3 text-white rounded-lg outline-none focus:border-amber-400 font-semibold cursor-pointer"
                   >
-                    <option value="silk">👑 রয়্যাল সিল্ক পাঞ্জাবি (Royal Silk)</option>
-                    <option value="katan">✨ বারাণসী কাতান কালেকশন (Designer Katan)</option>
-                    <option value="kabli">👔 সালতানাত কাবলি সেট (Kabli Suit Set)</option>
-                    <option value="wedding">💍 বর ও ওয়েডিং শেরওয়ানি (Wedding & Groom)</option>
-                    <option value="cotton">🌿 লখনৌ চিকেনকারি সুতি (Fine Cotton)</option>
-                    <option value="attar">🌸 নবাবী উদ ও আতর (Nawabi Oud & Attar)</option>
+                    <option value="silk">👑 Royal Silk Panjabi</option>
+                    <option value="katan">✨ Varanasi Katan Weave</option>
+                    <option value="kabli">👔 Sultanate Kabli Set</option>
+                    <option value="wedding">💍 Wedding & Groom Sherwani</option>
+                    <option value="cotton">🌿 Fine Cotton & Linen</option>
+                    <option value="attar">🌸 Nawabi Oud & Attar</option>
                   </select>
                 </div>
 
                 <div>
                   <label className="block text-stone-300 font-bold mb-1.5">
-                    প্রোডাক্ট ব্যাজ / ট্যাগ
+                    Product Badge / Tag
                   </label>
                   <input
                     type="text"
                     value={formBadge}
                     onChange={(e) => setFormBadge(e.target.value)}
-                    placeholder="যেমন: NEW DROP, BESTSELLER, EXCLUSIVE"
+                    placeholder="e.g. NEW DROP, BESTSELLER, EXCLUSIVE"
                     className="w-full bg-[#151824] border border-stone-700 text-xs px-3.5 py-3 text-white rounded-lg outline-none focus:border-amber-400 uppercase"
                   />
                 </div>
@@ -869,29 +869,29 @@ export default function AdminDashboard() {
               {/* Row 2: Name in Bangla & English */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-stone-300 font-bold mb-1.5 font-bangla">
-                    পণ্যের নাম (বাংলায়) *
+                  <label className="block text-stone-300 font-bold mb-1.5">
+                    Product Title *
                   </label>
                   <input
                     type="text"
                     required
                     value={formNameBangla}
                     onChange={(e) => setFormNameBangla(e.target.value)}
-                    placeholder="যেমন: রয়্যাল মিডনাইট জারি সিল্ক পাঞ্জাবি"
-                    className="w-full bg-[#151824] border border-stone-700 text-xs px-3.5 py-3 text-white rounded-lg outline-none focus:border-amber-400 font-bangla"
+                    placeholder="e.g. Royal Midnight Zari Silk Panjabi"
+                    className="w-full bg-[#151824] border border-stone-700 text-xs px-3.5 py-3 text-white rounded-lg outline-none focus:border-amber-400"
                   />
                 </div>
 
                 <div>
                   <label className="block text-stone-300 font-bold mb-1.5">
-                    Product Name (English) *
+                    Secondary Title / Subtitle *
                   </label>
                   <input
                     type="text"
                     required
                     value={formNameEnglish}
                     onChange={(e) => setFormNameEnglish(e.target.value)}
-                    placeholder="e.g. Royal Midnight Zari Silk Panjabi"
+                    placeholder="e.g. Royal Mulberry Silk Edition"
                     className="w-full bg-[#151824] border border-stone-700 text-xs px-3.5 py-3 text-white rounded-lg outline-none focus:border-amber-400"
                   />
                 </div>
@@ -901,7 +901,7 @@ export default function AdminDashboard() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-stone-300 font-bold mb-1.5">
-                    বিক্রয় মূল্য (Selling Price ৳) *
+                    Selling Price (BDT) *
                   </label>
                   <input
                     type="number"
@@ -915,7 +915,7 @@ export default function AdminDashboard() {
 
                 <div>
                   <label className="block text-stone-300 font-bold mb-1.5">
-                    নিয়মিত পূর্বের মূল্য (Regular Price ৳ - ঐচ্ছিক)
+                    Regular Price (BDT - Optional)
                   </label>
                   <input
                     type="number"
@@ -929,23 +929,23 @@ export default function AdminDashboard() {
 
               {/* Row 4: Fabric & Material */}
               <div>
-                <label className="block text-stone-300 font-bold mb-1.5 font-bangla">
-                  ফেব্রিক ও উপাদান বিবরণ (Fabric & Details) *
+                <label className="block text-stone-300 font-bold mb-1.5">
+                  Fabric & Material Specifications *
                 </label>
                 <input
                   type="text"
                   required
                   value={formFabric}
                   onChange={(e) => setFormFabric(e.target.value)}
-                  placeholder="যেমন: ১০০% খাঁটি মালবেরি হ্যান্ডলুম সিল্ক ও মেটালিক জারি ওয়ার্ক"
-                  className="w-full bg-[#151824] border border-stone-700 text-xs px-3.5 py-3 text-white rounded-lg outline-none focus:border-amber-400 font-bangla"
+                  placeholder="e.g. 100% Pure Mulberry Handloom Silk with Metallic Zari Work"
+                  className="w-full bg-[#151824] border border-stone-700 text-xs px-3.5 py-3 text-white rounded-lg outline-none focus:border-amber-400"
                 />
               </div>
 
               {/* Row 5: Image URL & Upload / Presets */}
               <div className="space-y-3 bg-[#131622] p-4 rounded-xl border border-stone-800">
-                <label className="block text-stone-300 font-bold font-bangla">
-                  প্রোডাক্টের ছবি নির্বাচন / পরিবর্তন করুন (Product Image):
+                <label className="block text-stone-300 font-bold">
+                  Select / Change Product Image:
                 </label>
 
                 <div className="flex flex-col sm:flex-row items-center gap-4">
@@ -964,7 +964,7 @@ export default function AdminDashboard() {
                         type="text"
                         value={formImage}
                         onChange={(e) => setFormImage(e.target.value)}
-                        placeholder="ছবির লিংক বা URL পেস্ট করুন..."
+                        placeholder="Paste image link or URL..."
                         className="w-full bg-[#0a0c12] border border-stone-700 text-xs px-3 py-2 text-white rounded-lg outline-none focus:border-amber-400"
                       />
                     </div>
@@ -973,7 +973,7 @@ export default function AdminDashboard() {
                     <div className="flex items-center gap-3">
                       <label className="px-3 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 border border-stone-600 text-stone-200 text-[11px] font-bold cursor-pointer flex items-center gap-1.5 transition-colors">
                         <Upload className="w-3.5 h-3.5 text-amber-400" />
-                        <span>কম্পিউটার থেকে ছবি আপলোড</span>
+                        <span>Upload from Computer</span>
                         <input
                           type="file"
                           accept="image/*"
@@ -981,7 +981,7 @@ export default function AdminDashboard() {
                           className="hidden"
                         />
                       </label>
-                      <span className="text-[10px] text-stone-500 font-bangla">বা নিচের প্রি-সেট থেকে ক্লিক করুন:</span>
+                      <span className="text-[10px] text-stone-500">or click a preset below:</span>
                     </div>
                   </div>
                 </div>
@@ -1008,7 +1008,7 @@ export default function AdminDashboard() {
               {/* Row 6: Sizes */}
               <div>
                 <label className="block text-stone-300 font-bold mb-1.5">
-                  উপলব্ধ সাইজ নির্বাচন করুন (Available Sizes):
+                  Available Sizes:
                 </label>
                 <div className="flex flex-wrap gap-2">
                   {standardSizesList.map((sz) => {
@@ -1039,15 +1039,15 @@ export default function AdminDashboard() {
 
               {/* Row 7: Description */}
               <div>
-                <label className="block text-stone-300 font-bold mb-1.5 font-bangla">
-                  বিস্তারিত বিবরণ (Description):
+                <label className="block text-stone-300 font-bold mb-1.5">
+                  Detailed Description:
                 </label>
                 <textarea
                   rows={3}
                   value={formDescription}
                   onChange={(e) => setFormDescription(e.target.value)}
-                  placeholder="পাঞ্জাবির কাটিং, কাপড়ের স্থায়িত্ব, ও বিশেষত্বের বিবরণ লিখুন..."
-                  className="w-full bg-[#151824] border border-stone-700 text-xs p-3 text-white rounded-lg outline-none focus:border-amber-400 font-bangla"
+                  placeholder="Describe cutting, fit, durability, and tailoring details..."
+                  className="w-full bg-[#151824] border border-stone-700 text-xs p-3 text-white rounded-lg outline-none focus:border-amber-400"
                 />
               </div>
 
@@ -1060,8 +1060,8 @@ export default function AdminDashboard() {
                   onChange={(e) => setFormInStock(e.target.checked)}
                   className="w-4 h-4 accent-amber-400 cursor-pointer"
                 />
-                <label htmlFor="stockCheck" className="text-stone-300 font-bold cursor-pointer font-bangla">
-                  এই প্রোডাক্টটি বর্তমানে ইন স্টক (In Stock) আছে এবং অর্ডার নেওয়া যাবে
+                <label htmlFor="stockCheck" className="text-stone-300 font-bold cursor-pointer">
+                  Product is currently In Stock and ready for customer orders
                 </label>
               </div>
 
@@ -1072,14 +1072,14 @@ export default function AdminDashboard() {
                   onClick={() => setIsModalOpen(false)}
                   className="px-5 py-2.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 text-xs font-bold transition-colors cursor-pointer"
                 >
-                  বাতিল করুন
+                  Cancel
                 </button>
 
                 <button
                   type="submit"
                   className="px-7 py-2.5 rounded-lg bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 hover:brightness-110 text-black font-extrabold text-xs uppercase tracking-wider transition-all shadow-md shadow-amber-400/20 cursor-pointer"
                 >
-                  {editingProduct ? 'পরিবর্তন সেভ করুন' : 'প্রোডাক্ট যুক্ত করুন'}
+                  {editingProduct ? 'Save Changes' : 'Add Product'}
                 </button>
               </div>
 

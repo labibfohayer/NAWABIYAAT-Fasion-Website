@@ -1,69 +1,70 @@
-# 👑 নবাবিয়াত (NAWABIYAAT) — Royal Panjabi Atelier
+# 👑 NAWABIYAAT — Royal Panjabi Atelier
 
-> **বাংলার ঐতিহ্যবাহী আভিজাত্য, খাঁটি মালবেরি সিল্ক ও আধুনিক লাক্সারি ফ্যাশনের ডিজিটাল অ্যাটেলিয়ার**
+> **A Digital Atelier of Royal Bengal Heritage, Pure Mulberry Silk, and Contemporary Luxury Menswear**
 
-নবাবিয়াত (NAWABIYAAT) একটি হাই-এন্ড এথনিক মেনসওয়্যার ই-কমার্স ওয়েব প্ল্যাটফর্ম, যা বিশেষভাবে প্রিমিয়াম সিল্ক পাঞ্জাবি, বারাণসী কাতান, সালতানাত কাবলি সেট, বর ও ওয়েডিং শেরওয়ানি এবং খাঁটি উদ আতরের জন্য নির্মিত।
-
----
-
-## 🌟 মূল বৈশিষ্ট্যসমূহ (Features)
-
-### ১. গ্রাহক অভিজ্ঞতা (Customer Experience)
-- **হাই-ফ্যাশন ইন্টারেক্টিভ হিরো স্টেজ**: ৩টি লাইভ লুকবুক (রয়্যাল সিল্ক, বারাণসী কাতান, সালতানাত কাবলি) সিলেকশন ও প্রাইস প্রিভিউ।
-- **এডিটরিয়াল ক্যাটাগরি গ্রিড**: রয়্যাল সিল্ক ফিচার হিরো ও ২×২ সিগনেচার কালেকশন গ্রিড।
-- **ডুয়াল ডিসপ্লে মোড**:
-  - **অটো-স্ক্রোল মোড (RTL Animation)**: ডান থেকে বামে নিরবচ্ছিন্ন স্মুথ স্ক্রোল।
-  - **ক্লাসিক গ্রিড ভিউ**: ৩ বা ৪ কলামের রেসপন্সিভ গ্রিড।
-- **৩:৪ পোর্ট্রেট ফ্যাশন কার্ড**: সাইজ পিলস (38, 40, 42, 44), উইশলিস্ট ও কুইক অ্যাড টু কার্ট।
-- **স্মার্ট সাইজ ক্যালকুলেটর (Size Advisor)**: উচ্চতা, ওজন ও ফিটিং পছন্দ অনুযায়ী সঠিক ইঞ্চি সাইজ নির্ধারণকারী এআই টুল।
-- **স্মার্ট শপিং ব্যাগ (Cart Drawer)**: ফ্রি ডেলিভারি প্রগ্রেস বার (৳৩,০০০+ অর্ডারে ফ্রি শিপিং) ও কুপন ডিসকাউন্ট ইঞ্জিন (`EID2026`, `NAWABI10`)।
-- **মাল্টি-মেথড চেকআউট (Checkout Modal)**: ক্যাশ অন ডেলিভারি (COD), বিকাশ (bKash) ও নগদ (Nagad) TrxID ভেরিফিকেশন সহ ডিজিটাল ইনভয়েস জেনারেটর (`NW-XXXXXX`)।
-- **যোগাযোগ ও ইনকোয়ারি পেজ (`/contact`)**: সরাসরি বার্তা বা ইমেইল পাঠানোর ফর্ম ও শোরুম লাউঞ্জের ঠিকানা।
-- **নবাবিয়াত হেরিটেজ স্টোরি (`/about`)**: ব্র্যান্ড ফিলোসফি ও ৪টি কারিগরি স্তম্ভ।
-- **ডিপ-ব্ল্যাক লাক্সারি ফুটার**: ৫-কলামের পরিচ্ছন্ন লেআউট, ৩টি ফ্ল্যাগশিপ শোরুম ও নিউজলেটার।
-
-### ২. 🛠️ পূর্ণাঙ্গ অ্যাডমিন কন্ট্রোল প্যানেল (`/admin`)
-- লিংক: `/admin` এ প্রবেশ করলেই সম্পূর্ণ অ্যাডমিন ড্যাশবোর্ড ওপেন হয়।
-- **প্রোডাক্ট অ্যাড, এডিট ও ডিলিট**: ৬টি ক্যাটাগরি (সিল্ক, কাতান, কাবলি, ওয়েডিং, সুতি, আতর), নাম, দাম, ছবি, ফেব্রিক, স্টক অন/অফ ও সাইজ কাস্টমাইজেশন।
-- **কম্পিউটার থেকে ছবি আপলোড**: যেকোনো ছবি ফাইল সরাসরি আপলোড ও লাইভ প্রিভিউ।
-- **রিয়েল-টাইম অটো-সিঙ্ক**: অ্যাডমিন প্যানেলে যেকোনো পরিবর্তন সেভ করলেই মূল ওয়েবসাইটে সাথে সাথে লাইভ আপডেট।
-- **লাইভ কাস্টমার অর্ডার ট্র্যাকিং**: গ্রাহকদের সকল অর্ডারের তালিকা ও স্ট্যাটাস (`Pending` ➔ `Confirmed` ➔ `Shipped` ➔ `Delivered`) পরিবর্তন।
+NAWABIYAAT is a high-end luxury ethnic menswear e-commerce platform built specifically for premium silk panjabis, Varanasi katan weaves, Sultanate kabli sets, wedding and groom sherwanis, and authentic Cambodian oud attars.
 
 ---
 
-## 💻 প্রযুক্তিগত কাঠামো (Tech Stack)
+## 🌟 Key Features
+
+### 1. Customer Experience
+- **Interactive High-Fashion Hero Stage**: 3 live lookbook selections (Royal Silk, Varanasi Katan, Sultanate Kabli) with instant preview and price tags.
+- **Editorial Category Layout**: Royal Silk feature spotlight and 2×2 signature collection bento grid.
+- **Dual Display Modes**:
+  - **Auto-Scroll Mode (RTL Smooth Motion)**: Seamless continuous horizontal scrolling marquee.
+  - **Classic Grid View**: Responsive 3-to-4 column luxury grid.
+- **3:4 Portrait Fashion Cards**: Size selector pills (38, 40, 42, 44), instant wishlist, and quick add-to-bag.
+- **Smart AI Size Advisor**: Calculates exact body proportions and recommends optimal garment sizing based on height, weight, and fit preference.
+- **Interactive Bag Drawer**: Free shipping progress meter (Free shipping on orders BDT 3,000+) and coupon engine (`EID2026`, `NAWABI10`, `NAWAB`).
+- **Express Multi-Method Checkout**: Cash on Delivery (COD), bKash Instant, and Nagad digital payments with TrxID verification and automated invoice receipt generator (`NW-XXXXXX`).
+- **Contact & Concierge Desk (`/contact`)**: Direct bespoke inquiry forms, WhatsApp styling chat, and showroom atelier addresses.
+- **Heritage Story (`/about`)**: Brand philosophy and 4 pillars of craftsmanship.
+- **Deep-Black Luxury Footer**: 5-column layout, 3 flagship showroom directories, and newsletter subscriber integration.
+
+### 2. 🛠️ Central Management & Admin Portal (`/admin`)
+- Direct access via `/admin` routing.
+- **Complete Product CRUD**: Create, read, update, and delete products across 6 luxury categories (Silk, Katan, Kabli, Wedding, Cotton, Oud).
+- **Computer Image Upload**: Native client-side image file upload (FileReader Base64) with live visual preview.
+- **Real-Time Cross-Tab Sync**: Product modifications immediately synchronize across open tabs via Custom Reactive Storage Events.
+- **Live Order Management**: View real-time orders, customer addresses, items, and transition status (`Pending` ➔ `Confirmed` ➔ `Shipped` ➔ `Delivered`).
+- **Site-Wide Customization**: Modify top announcement strip, hotline phone, and free shipping thresholds.
+
+---
+
+## 💻 Tech Stack
 
 - **Framework**: Next.js 16.4.5 (App Router, Turbopack)
 - **Library**: React 19
 - **Styling**: Tailwind CSS v4, Custom CSS Animations
 - **Icons**: Lucide React & Custom Brand SVGs
-- **Typography**: Playfair Display (Serif), Hind Siliguri (Bangla), Geist Sans
+- **Typography**: Playfair Display (Serif), Geist Sans
 - **State & Storage**: Reactive Web Storage Events & Local Storage Layer
 
 ---
 
-## 🚀 লোকাল ডেভেলপমেন্ট সেটআপ (Getting Started)
+## 🚀 Getting Started
 
 ```bash
-# ১. রিপোজিটরি ক্লোন করুন
+# 1. Clone the repository
 git clone https://github.com/labibfohayer/nawabiyaat-panjabi.git
 
-# ২. প্রজেক্ট ফোল্ডারে প্রবেশ করুন
+# 2. Navigate to project directory
 cd nawabiyaat-panjabi
 
-# ৩. ডিপেন্ডেন্সি ইনস্টল করুন
+# 3. Install dependencies
 npm install
 
-# ৪. ডেভেলপমেন্ট সার্ভার চালু করুন
+# 4. Start the development server
 npm run dev
 ```
 
-ব্রাউজারে ভিজিট করুন:
-- **মূল ওয়েবসাইট**: [http://localhost:3000](http://localhost:3000)
-- **অ্যাডমিন প্যানেল**: [http://localhost:3000/admin](http://localhost:3000/admin)
+Visit in your browser:
+- **Main Storefront**: [http://localhost:3000](http://localhost:3000)
+- **Admin Control Portal**: [http://localhost:3000/admin](http://localhost:3000/admin)
 
 ---
 
-## 📄 লাইসেন্স (License)
+## 📄 License
 
-© 2026 **NAWABIYAAT (নবাবিয়াত) Atelier**. সর্বস্বত্ব সংরক্ষিত।
+© 2026 **NAWABIYAAT Atelier**. All Rights Reserved.
