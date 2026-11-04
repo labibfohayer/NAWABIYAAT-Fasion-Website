@@ -60,8 +60,9 @@ npm run dev
 ```
 
 Visit in your browser:
-- **Main Storefront**: [http://localhost:3000](http://localhost:3000)
-- **Admin Control Portal**: [http://localhost:3000/admin](http://localhost:3000/admin)
+- **Live Production Storefront**: [https://nawabiyaat.pages.dev](https://nawabiyaat.pages.dev)
+- **Live Admin Control Portal**: [https://nawabiyaat.pages.dev/admin](https://nawabiyaat.pages.dev/admin)
+- **Local Development**: [http://localhost:3000](http://localhost:3000) (Admin: [http://localhost:3000/admin](http://localhost:3000/admin))
 
 ---
 
