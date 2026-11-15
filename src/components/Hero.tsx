@@ -31,7 +31,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onOpenSizeAdvisor })
       subtitle: 'Varanasi Jacquard Weave with Antique Brass Buttons',
       desc: 'Woven with Varanasi heritage pure katan silk, ornate minakari detailing, and heirloom brass buttonwork for festive grandeur.',
       price: 'BDT 6,400',
-      image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80',
+      image: '/assets/images/katan.jpg',
       modelTag: 'Model Wearing: Imperial Emerald Katan'
     },
     {
@@ -42,7 +42,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onOpenSizeAdvisor })
       subtitle: 'Super 120s Egyptian Mercerized Cotton Set',
       desc: 'Engineered from wrinkle-free Egyptian mercerized cotton. Includes tailored panjabi and matching comfort trouser pyjama set.',
       price: 'BDT 4,950',
-      image: '/assets/images/jubbah.jpg',
+      image: '/assets/images/kabli.jpg',
       modelTag: 'Model Wearing: Jet Black Kabli Set'
     }
   ];

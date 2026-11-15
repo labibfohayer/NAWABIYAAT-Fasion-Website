@@ -74,11 +74,13 @@ export default function AdminDashboard() {
   // Preset image gallery for quick selection
   const imagePresets = [
     { label: 'Royal Silk (Panjabi)', url: '/assets/images/panjabi.jpg' },
-    { label: 'Sultanate Kabli (Jubbah/Kabli)', url: '/assets/images/jubbah.jpg' },
-    { label: 'Varanasi Katan (Katan Weave)', url: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80' },
-    { label: 'Wedding Sherwani (Groom Wedding)', url: 'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=800&q=80' },
-    { label: 'Black Gloss Silk (Black Silk)', url: 'https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?auto=format&fit=crop&w=800&q=80' },
-    { label: 'Nawabi Oud & Attar (Oud & Attar)', url: 'https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&w=800&q=80' }
+    { label: 'Varanasi Katan (Emerald Green)', url: '/assets/images/katan.jpg' },
+    { label: 'Sultanate Kabli (Tailored Black)', url: '/assets/images/kabli.jpg' },
+    { label: 'Wedding Sherwani (Ivory Pearl)', url: '/assets/images/sherwani.jpg' },
+    { label: 'Royal Groom (Crimson Maroon)', url: '/assets/images/groom.jpg' },
+    { label: 'Fine Cotton (White Chikankari)', url: '/assets/images/cotton.jpg' },
+    { label: 'Arabian Jubbah (White Thobe)', url: '/assets/images/jubbah.jpg' },
+    { label: 'Nawabi Oud & Attar (Fragrance)', url: 'https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&w=800&q=80' }
   ];
 
   const standardSizesList = ['M (38)', 'L (40)', 'XL (42)', 'XXL (44)', '3XL (46)'];

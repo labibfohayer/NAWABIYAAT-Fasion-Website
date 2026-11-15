@@ -73,7 +73,7 @@ export const Categories: React.FC<CategoriesProps> = ({ onSelectCategory }) => {
             className="group relative rounded-xl overflow-hidden aspect-[4/5] bg-stone-900 cursor-pointer shadow-sm hover:shadow-xl transition-all duration-500 border border-stone-200"
           >
             <img 
-              src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=600&q=80" 
+              src="/assets/images/katan.jpg" 
               alt="Designer Katan" 
               className="w-full h-full object-cover object-top opacity-85 group-hover:scale-105 group-hover:opacity-95 transition-all duration-500" 
             />
@@ -100,7 +100,7 @@ export const Categories: React.FC<CategoriesProps> = ({ onSelectCategory }) => {
             className="group relative rounded-xl overflow-hidden aspect-[4/5] bg-stone-900 cursor-pointer shadow-sm hover:shadow-xl transition-all duration-500 border border-stone-200"
           >
             <img 
-              src="/assets/images/jubbah.jpg" 
+              src="/assets/images/kabli.jpg" 
               alt="Kabli Suit Set" 
               className="w-full h-full object-cover object-top opacity-85 group-hover:scale-105 group-hover:opacity-95 transition-all duration-500" 
             />
@@ -127,7 +127,7 @@ export const Categories: React.FC<CategoriesProps> = ({ onSelectCategory }) => {
             className="group relative rounded-xl overflow-hidden aspect-[4/5] bg-stone-900 cursor-pointer shadow-sm hover:shadow-xl transition-all duration-500 border border-stone-200"
           >
             <img 
-              src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=600&q=80" 
+              src="/assets/images/sherwani.jpg" 
               alt="Wedding & Groom" 
               className="w-full h-full object-cover object-top opacity-85 group-hover:scale-105 group-hover:opacity-95 transition-all duration-500" 
             />

@@ -50,7 +50,7 @@ export const PromoBanners: React.FC<PromoBannersProps> = ({
 
           {/* Background Ambient Model Image with soft opacity */}
           <img 
-            src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=700&q=80" 
+            src="/assets/images/sherwani.jpg" 
             alt="Groom Couture" 
             className="absolute right-0 top-0 w-2/5 h-full object-cover object-top opacity-20 group-hover:scale-105 group-hover:opacity-30 transition-all duration-700 pointer-events-none"
           />
