@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useMemo } from 'react';
 import { PRODUCTS_DATA } from '../data/products';
-import { getStoredProducts } from '../utils/productStorage';
+import { getStoredProducts, sanitizeProductImage } from '../utils/productStorage';
 import { Product, CartItem, CustomerOrder } from '../types';
 import { Navbar } from '../components/Navbar';
 import { Hero } from '../components/Hero';
@@ -77,7 +77,24 @@ export default function Home() {
       window.addEventListener('storage', handleProductsUpdate);
 
       const savedCart = localStorage.getItem('nawabiyaat_cart');
-      if (savedCart) setCart(JSON.parse(savedCart));
+      if (savedCart) {
+        try {
+          const parsedCart = JSON.parse(savedCart);
+          if (Array.isArray(parsedCart)) {
+            const sanitizedCart = parsedCart.map((item: CartItem) => {
+              const canonical = PRODUCTS_DATA.find((p) => p.id === item.id);
+              return {
+                ...item,
+                image: canonical ? canonical.image : sanitizeProductImage(item.image, item.id)
+              };
+            });
+            setCart(sanitizedCart);
+            localStorage.setItem('nawabiyaat_cart', JSON.stringify(sanitizedCart));
+          }
+        } catch {
+          // ignore corrupted cart json
+        }
+      }
 
       const savedWishlist = localStorage.getItem('nawabiyaat_wishlist');
       if (savedWishlist) setWishlist(JSON.parse(savedWishlist));
