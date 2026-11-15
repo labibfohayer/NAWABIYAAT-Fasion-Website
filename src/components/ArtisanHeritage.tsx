@@ -32,7 +32,7 @@ export const ArtisanHeritage: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 md:py-20 bg-stone-50 border-y border-stone-200 text-left font-sans">
+    <section id="artisan-heritage" className="py-16 md:py-20 bg-stone-50 border-y border-stone-200 text-left font-sans scroll-mt-24">
       <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
         
         {/* Header */}

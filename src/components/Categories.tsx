@@ -9,7 +9,7 @@ interface CategoriesProps {
 
 export const Categories: React.FC<CategoriesProps> = ({ onSelectCategory }) => {
   return (
-    <section id="shop-by-category" className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 py-16 scroll-mt-20 text-left font-sans">
+    <section id="shop-by-category" className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 py-16 scroll-mt-24 text-left font-sans">
       
       {/* Section Header */}
       <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-6 mb-8 border-b border-stone-200">

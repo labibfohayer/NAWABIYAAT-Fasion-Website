@@ -38,7 +38,7 @@ export const ClientTestimonials: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 md:py-20 bg-white border-b border-stone-200 text-left font-sans">
+    <section id="client-testimonials" className="py-16 md:py-20 bg-white border-b border-stone-200 text-left font-sans scroll-mt-24">
       <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
         
         {/* Header */}

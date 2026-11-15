@@ -20,6 +20,7 @@ import { OrderSuccessModal } from '../components/OrderSuccessModal';
 import { Footer } from '../components/Footer';
 import { ArtisanHeritage } from '../components/ArtisanHeritage';
 import { ClientTestimonials } from '../components/ClientTestimonials';
+import { ScrollToTop } from '../components/ScrollToTop';
 import { SlidersHorizontal, Play, Pause, Sparkles, Crown } from 'lucide-react';
 
 export default function Home() {
@@ -318,7 +319,7 @@ export default function Home() {
             />
 
             {/* TRENDING NOW Section with Smooth Right-to-Left Product Animation */}
-            <section id="trending-now" className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 py-16 scroll-mt-20">
+            <section id="trending-now" className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 py-16 scroll-mt-24">
               <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-6 mb-8 border-b border-stone-200 text-left">
                 <div>
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/30 text-amber-800 text-[10px] font-bold uppercase tracking-[0.2em] mb-2">
@@ -337,7 +338,7 @@ export default function Home() {
               {/* Minimal Tab Filters, View Modes & Controls */}
               <div className="flex flex-col lg:flex-row items-center justify-between gap-4 pb-6 border-b border-stone-200 mb-8">
                 {/* Category Filter Tabs */}
-                <div className="flex items-center gap-2 overflow-x-auto text-[11px] uppercase tracking-wider font-semibold w-full lg:w-auto pb-2 lg:pb-0">
+                <div className="flex items-center gap-2 overflow-x-auto scroll-smooth text-[11px] uppercase tracking-wider font-semibold w-full lg:w-auto pb-2 lg:pb-0">
                   {[
                     { id: 'all', label: 'All Items' },
                     { id: 'silk', label: 'Royal Silk' },
@@ -549,6 +550,9 @@ export default function Home() {
         order={completedOrder}
         onClose={() => setCompletedOrder(null)}
       />
+
+      {/* Royal Smooth Back to Top Button */}
+      <ScrollToTop />
 
     </div>
   );
