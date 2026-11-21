@@ -1,5 +1,7 @@
 # NAWABIYAAT - Royal Panjabi Atelier E-Commerce Platform & Admin Portal
 
+[![Live Storefront](https://img.shields.io/badge/Live_Storefront-nawabiyaat.pages.dev-gold?style=for-the-badge&logo=cloudflare&logoColor=white)](https://nawabiyaat.pages.dev/) [![Admin Portal](https://img.shields.io/badge/Admin_Portal-nawabiyaat.pages.dev%2Fadmin-black?style=for-the-badge&logo=cloudflare&logoColor=white)](https://nawabiyaat.pages.dev/admin)
+
 A full-featured luxury ethnic menswear e-commerce platform and administrative control portal engineered for bespoke artisanal garments, Varanasi katan weaves, pure mulberry silk panjabis, Sultanate kabli sets, and authentic Cambodian oud attars. Built with Next.js 16, React 19, TypeScript, and Tailwind CSS v4.
 
 ---
@@ -96,9 +98,13 @@ npm install
 ```bash
 npm run dev
 ```
-Open your browser and navigate to:
-- Storefront: `http://localhost:3000`
-- Admin Dashboard: `http://localhost:3000/admin`
+For local development:
+- Local Storefront: `http://localhost:3000`
+- Local Admin Dashboard: `http://localhost:3000/admin`
+
+🌐 **Live Production Deployments:**
+- Live Storefront: **[nawabiyaat.pages.dev](https://nawabiyaat.pages.dev/)**
+- Live Admin Portal: **[nawabiyaat.pages.dev/admin](https://nawabiyaat.pages.dev/admin)**
 
 ### 4. Production Build and Test
 ```bash
